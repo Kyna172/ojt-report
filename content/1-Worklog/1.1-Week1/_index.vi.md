@@ -13,7 +13,7 @@ pre: " <b> 1.1. </b> "
 
 ---
 
-### Công việc thực hiện trong tuần: (14/09/2026 – 19/09/2026):
+### Công việc thực hiện trong tuần:
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
@@ -21,7 +21,7 @@ pre: " <b> 1.1. </b> "
 | 3 | Tìm hiểu nội quy, quy định làm việc và hướng dẫn của chương trình FCAJ. | 15/09/2026 | 15/09/2026 | [Nội quy FCAJ](https://hcm-rules.awsfcaj.com/1-regulations/) |
 | 4 | Truy cập tài liệu AWS Study Group. <br> Tìm hiểu quy trình nhận AWS Credit bổ sung 100$ và cách theo dõi chi phí. | 16/09/2026 | 16/09/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
 | 5 | Theo dõi video AWS Study Group. <br> Tìm hiểu AWS Management Console, Regions và Availability Zones. | 17/09/2026 | 17/09/2026 | [AWS Study Group YouTube](https://www.youtube.com/watch?v=Gz56QzLQ_Yo&list=PLahN4TLWtox3TSYFbN1DNX7NZgTVXNj3x) |
-| 6 | Ôn tập kiến thức đã học, kiểm tra thông tin tài khoản và tổng hợp Worklog tuần 1. | 18/09/2026 | 18/09/2026 | [FCAJ Portal](https://hcm-portal.awsfcaj.com/) <br> [AWS Sign In](https://signin.aws.amazon.com/) |
+| 6 | Kiểm tra thông tin tài khoản và tổng hợp Worklog tuần 1. | 18/09/2026 | 18/09/2026 | [FCAJ Portal](https://hcm-portal.awsfcaj.com/) <br> [AWS Sign In](https://signin.aws.amazon.com/) |
 
 ---
 
