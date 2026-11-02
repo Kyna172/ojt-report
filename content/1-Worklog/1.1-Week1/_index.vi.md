@@ -17,18 +17,16 @@ pre: " <b> 1.1. </b> "
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| 2 | Nhận thông tin tiếp nhận thực tập và tham gia kênh liên lạc. <br> Đăng ký tài khoản AWS và khai báo thông tin trên FCAJ Portal. | 14/09/2026 | 14/09/2026 | [AWS Sign In](https://signin.aws.amazon.com/) <br> [FCAJ Portal](https://hcm-portal.awsfcaj.com/) |
+| 2 | Nhận thông tin tiếp nhận thực tập và tham gia kênh liên lạc. <br> Đăng ký tài khoản AWS và FCAJ Portal. | 14/09/2026 | 14/09/2026 | [AWS Sign In](https://signin.aws.amazon.com/) <br> [FCAJ Portal](https://hcm-portal.awsfcaj.com/) |
 | 3 | Tìm hiểu nội quy, quy định làm việc và hướng dẫn của chương trình FCAJ. | 15/09/2026 | 15/09/2026 | [Nội quy FCAJ](https://hcm-rules.awsfcaj.com/1-regulations/) |
-| 4 | Truy cập tài liệu AWS Study Group. <br> Tìm hiểu quy trình nhận AWS Credit bổ sung và cách theo dõi chi phí. | 16/09/2026 | 16/09/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
-| 5 | Bắt đầu học qua video AWS Study Group. <br> Tìm hiểu AWS Management Console, Regions và Availability Zones. | 17/09/2026 | 17/09/2026 | [AWS Study Group YouTube](https://www.youtube.com/watch?v=Gz56QzLQ_Yo&list=PLahN4TLWtox3TSYFbN1DNX7NZgTVXNj3x) |
-| 6 | Tiếp tục học về bảo mật tài khoản AWS, IAM và MFA. <br> Tìm hiểu cách theo dõi ngân sách bằng AWS Budgets. | 18/09/2026 | 18/09/2026 | [AWS Study Group YouTube](https://www.youtube.com/watch?v=Gz56QzLQ_Yo&list=PLahN4TLWtox3TSYFbN1DNX7NZgTVXNj3x) <br> [AWS IAM](https://docs.aws.amazon.com/iam/) |
-| 7 | Ôn tập kiến thức đã học, kiểm tra thông tin tài khoản và tổng hợp Worklog tuần 1. | 19/09/2026 | 19/09/2026 | [FCAJ Portal](https://hcm-portal.awsfcaj.com/) <br> [AWS Sign In](https://signin.aws.amazon.com/) |
+| 4 | Truy cập tài liệu AWS Study Group. <br> Tìm hiểu quy trình nhận AWS Credit bổ sung 100$ và cách theo dõi chi phí. | 16/09/2026 | 16/09/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| 5 | Theo dõi video AWS Study Group. <br> Tìm hiểu AWS Management Console, Regions và Availability Zones. | 17/09/2026 | 17/09/2026 | [AWS Study Group YouTube](https://www.youtube.com/watch?v=Gz56QzLQ_Yo&list=PLahN4TLWtox3TSYFbN1DNX7NZgTVXNj3x) |
+| 6 | Ôn tập kiến thức đã học, kiểm tra thông tin tài khoản và tổng hợp Worklog tuần 1. | 18/09/2026 | 18/09/2026 | [FCAJ Portal](https://hcm-portal.awsfcaj.com/) <br> [AWS Sign In](https://signin.aws.amazon.com/) |
 
 ---
 
 ### Kết quả đạt được tuần 1:
-- Đã thực hiện các bước đăng ký tài khoản và khai báo thông tin thực tập theo hướng dẫn.
+- Đã thực hiện các bước đăng ký tài khoản theo hướng dẫn.
 - Đã tiếp cận nội quy FCAJ và nguồn tài liệu AWS Study Group.
-- Bước đầu tìm hiểu AWS Management Console, Regions, Availability Zones, IAM và MFA.
 - Đã tìm hiểu quy trình AWS Credit và các biện pháp theo dõi chi phí sử dụng dịch vụ AWS.
 - Tổng hợp nội dung học tập để chuẩn bị cho tuần tiếp theo.
