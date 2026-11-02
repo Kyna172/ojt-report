@@ -6,14 +6,14 @@ chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
-Mục tiêu tuần 1:
+### Mục tiêu tuần 1:
 - Hoàn tất đăng ký tài khoản AWS và khai báo thông tin trên FCAJ Portal.
 - Tìm hiểu nội quy chương trình và các tài liệu học tập AWS Study Group.
 - Làm quen với AWS Management Console, kiến thức điện toán đám mây và bảo mật tài khoản cơ bản.
 
 ---
 
-Công việc thực hiện trong tuần: (14/09/2026 – 19/09/2026):
+### Công việc thực hiện trong tuần: (14/09/2026 – 19/09/2026):
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
@@ -26,7 +26,7 @@ Công việc thực hiện trong tuần: (14/09/2026 – 19/09/2026):
 
 ---
 
-Kết quả đạt được tuần 1:
+### Kết quả đạt được tuần 1:
 - Đã thực hiện các bước đăng ký tài khoản và khai báo thông tin thực tập theo hướng dẫn.
 - Đã tiếp cận nội quy FCAJ và nguồn tài liệu AWS Study Group.
 - Bước đầu tìm hiểu AWS Management Console, Regions, Availability Zones, IAM và MFA.
