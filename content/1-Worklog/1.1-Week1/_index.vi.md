@@ -17,8 +17,9 @@ pre: " <b> 1.1. </b> "
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| 2 | Nhận thông tin tiếp nhận thực tập và tham gia kênh liên lạc. <br> Đăng ký tài khoản AWS và FCAJ Portal. &nbsp;&nbsp;&nbsp;+ Tạo tài khoản AWS.<br>
-&nbsp;&nbsp;&nbsp;+ Nhận $100 AWS Credits ban đầu sau khi đăng ký thành công. | 14/09/2026 | 14/09/2026 | [AWS Sign In](https://signin.aws.amazon.com/) <br> [FCAJ Portal](https://hcm-portal.awsfcaj.com/) |
+| 2 | Nhận thông tin tiếp nhận thực tập và tham gia kênh liên lạc. <br> Đăng ký tài khoản AWS và FCAJ Portal.
+&nbsp;&nbsp;&nbsp;+ Tạo tài khoản AWS.<br>
+&nbsp;&nbsp;&nbsp;+ Nhận $100 AWS Credits ban đầu sau khi đăng ký thành công.| 14/09/2026 | 14/09/2026 | [AWS Sign In](https://signin.aws.amazon.com/) <br> [FCAJ Portal](https://hcm-portal.awsfcaj.com/) |
 | 3 | Tìm hiểu nội quy, quy định làm việc và hướng dẫn của chương trình FCAJ. | 15/09/2026 | 15/09/2026 | [Nội quy FCAJ](https://hcm-rules.awsfcaj.com/1-regulations/) |
 | 4 | Truy cập tài liệu AWS Study Group. <br> Tìm hiểu quy trình nhận AWS Credit bổ sung 100$ và cách theo dõi chi phí. | 16/09/2026 | 16/09/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
 | 5 | Theo dõi video AWS Study Group. <br> Tìm hiểu AWS Management Console, Regions và Availability Zones. | 17/09/2026 | 17/09/2026 | [AWS Study Group YouTube](https://www.youtube.com/watch?v=Gz56QzLQ_Yo&list=PLahN4TLWtox3TSYFbN1DNX7NZgTVXNj3x) <br> [AWS IAM](https://docs.aws.amazon.com/iam/) |
