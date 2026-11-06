@@ -1,4 +1,3 @@
-
 ---
 title: "Week 2 Worklog"
 date: 2026-09-21
