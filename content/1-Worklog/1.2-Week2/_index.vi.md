@@ -1,28 +1,67 @@
+
 ---
 title: "Worklog Tuần 2"
-date: 2025-08-18
+date: 2026-09-21
 weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
 
-# Tuần 2: Nền tảng mạng chuyên sâu trên AWS (Amazon VPC)
-
 ### Mục tiêu tuần 2:
-* Nắm chắc kiến trúc mạng riêng ảo Amazon Virtual Private Cloud (Amazon VPC).
-* Tự tay thiết kế và cấu hình một VPC hoàn chỉnh đa vùng sẵn sàng (Multi-AZ) gồm Public Subnet và Private Subnet.
-* Hiểu rõ cơ chế định tuyến qua Internet Gateway, NAT Gateway và sự khác biệt giữa Security Group và Network ACL.
+- Làm quen với môi trường làm việc, nội quy và các thành viên của First Cloud AI Journey.
+- Tìm hiểu và thực hành quản lý danh tính, phân quyền truy cập với AWS IAM.
+- Nắm được kiến thức cơ bản về Amazon VPC, các thành phần mạng và bảo mật trên AWS.
+- Tham gia sự kiện FCAJ Buildrathon 2026 để học hỏi và giao lưu với cộng đồng AWS.
 
-### Các công việc triển khai trong tuần:
-| Thứ | Nội dung công việc | Bắt đầu | Hoàn thành | Tài liệu tham khảo |
-| :--- | :--- | :--- | :--- | :--- |
-| **Thứ 2** | - Học cách tính toán dải địa chỉ IPv4 theo chuẩn CIDR (`10.0.0.0/16`).<br>- Khởi tạo VPC tùy chỉnh mang tên `Lab-VPC` trải dài trên 2 Availability Zones (`ap-southeast-1a` và `ap-southeast-1b`). | 18/08/2025 | 18/08/2025 | [Amazon VPC User Guide](https://docs.aws.amazon.com/vpc/) |
-| **Thứ 3** | - Tạo 2 Public Subnet và 2 Private Subnet trong `Lab-VPC`.<br>- Tạo và gắn Internet Gateway (IGW) vào VPC.<br>- Cấu hình Route Table cho Public Subnet với đích đến `0.0.0.0/0` trỏ về IGW. | 19/08/2025 | 19/08/2025 | [VPC Route Tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html) |
-| **Thứ 4** | - Cấp phát một địa chỉ Elastic IP (EIP) và tạo NAT Gateway đặt tại Public Subnet.<br>- Cập nhật Private Route Table để cho phép máy chủ trong Private Subnet truy cập internet tải gói cập nhật qua NAT Gateway.<br>- Kiểm tra lệnh `yum update` từ máy chủ private thành công. | 20/08/2025 | 20/08/2025 | [VPC NAT Gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html) |
-| **Thứ 5** | - So sánh chi tiết Security Group (Stateful - lọc ở cấp độ Instance) và NACL (Stateless - lọc ở cấp độ Subnet).<br>- Thử nghiệm chặn một địa chỉ IP cụ thể bằng quy tắc Inbound Deny trên NACL.<br>- Tìm hiểu cơ chế ghi log lưu lượng mạng VPC Flow Logs. | 21/08/2025 | 21/08/2025 | [Bảo mật VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html) |
-| **Thứ 6** | - Tìm hiểu sơ lược về VPC Peering và giải pháp AWS Transit Gateway khi kết nối nhiều VPC.<br>- Xóa bỏ NAT Gateway và giải phóng Elastic IP ngay sau buổi thực hành để tránh phát sinh chi phí duy trì.<br>- Vẽ sơ đồ luồng dữ liệu mạng và nộp báo cáo tuần 2. | 22/08/2025 | 22/08/2025 | [VPC Peering Guide](https://docs.aws.amazon.com/vpc/latest/peering/) |
+---
 
-### Kết quả đạt được & Bài học rút ra:
-* **Tư duy thiết kế mạng an toàn:** Hiểu tường tận nguyên tắc phòng thủ theo chiều sâu: Máy chủ web hướng người dùng đặt ở Public Subnet, cơ sở dữ liệu và logic nghiệp vụ cốt lõi bắt buộc nằm ở Private Subnet.
-* **Ý thức tối ưu chi phí:** Trải nghiệm thực tế việc NAT Gateway tính tiền theo giờ và dung lượng dữ liệu đi qua, rèn luyện thói quen tắt/xóa tài nguyên có tính phí ngay khi kết thúc bài lab.
-* **Kỹ năng gỡ rối (troubleshooting) mạng:** Biết cách kiểm tra Route Table và Security Group khi một máy chủ không thể kết nối ra internet hoặc không nhận được gói tin phản hồi.
+### Công việc thực hiện trong tuần:
+
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 2 | - Đăng ký lịch lên văn phòng ngày 22/09 thông qua FCAJ Portal.<br>- Đọc lại nội quy, quy định và hướng dẫn đăng ký lên văn phòng. | 21/09/2026 | 21/09/2026 | [FCAJ Portal](https://hcm-portal.awsfcaj.com/) <br> [Nội quy FCAJ](https://hcm-rules.awsfcaj.com/1-regulations/) <br> [Hướng dẫn đăng ký](https://hcm-rules.awsfcaj.com/2-instructions/2.2-register/) |
+| 3 | - Được phê duyệt lịch đăng ký và lần đầu đến văn phòng.<br>- Làm quen với các thành viên, anh chị hỗ trợ FCAJ.<br>- Lắng nghe và ghi nhớ nội quy, quy định tại đơn vị thực tập. | 22/09/2026 | 22/09/2026 | [FCAJ Portal](https://hcm-portal.awsfcaj.com/) |
+| 4 | - Truy cập tài liệu học tập AWS Study Group.<br>- Tìm hiểu AWS IAM cơ bản:<br>&nbsp;&nbsp;&nbsp;+ IAM Users và Groups.<br>&nbsp;&nbsp;&nbsp;+ IAM Policies và Roles.<br>&nbsp;&nbsp;&nbsp;+ Root User và MFA.<br>&nbsp;&nbsp;&nbsp;+ Nguyên tắc phân quyền tối thiểu (Least Privilege). | 23/09/2026 | 23/09/2026 | [AWS Study Group](https://cloudjourney.awsfcaj.com/) <br> [AWS IAM Workshop](https://000002.awsfcaj.com/1-introduction/) |
+| 5 | - Thực hành AWS IAM:<br>&nbsp;&nbsp;&nbsp;+ Tạo IAM Group và IAM User.<br>&nbsp;&nbsp;&nbsp;+ Tạo IAM Role và IAM User.<br>&nbsp;&nbsp;&nbsp;+ Chuyển đổi IAM Role (Switch Role).<br>&nbsp;&nbsp;&nbsp;+ Dọn dẹp tài nguyên. | 24/09/2026 | 24/09/2026 | [AWS IAM Workshop](https://000002.awsfcaj.com/) |
+| 6 | - Tìm hiểu Amazon VPC cơ bản:<br>&nbsp;&nbsp;&nbsp;+ VPC, CIDR và Subnet.<br>&nbsp;&nbsp;&nbsp;+ Route Table, Internet Gateway và NAT Gateway.<br>&nbsp;&nbsp;&nbsp;+ Security Group và Network ACL (NACL).<br>&nbsp;&nbsp;&nbsp;+ VPC Flow Logs và Reachability Analyzer.<br>&nbsp;&nbsp;&nbsp;+ Tổng quan AWS Site-to-Site VPN. | 25/09/2026 | 25/09/2026 | [Amazon VPC Workshop](https://000003.awsfcaj.com/1-introduction/) |
+| 7 | - Tham gia sự kiện FCAJ Buildrathon 2026 Season 01 Kickoff tại văn phòng AWS Việt Nam.<br>&nbsp;&nbsp;&nbsp;+ Tham dự Talkshow "The Thinking Behind Building The Bot".<br>&nbsp;&nbsp;&nbsp;+ Tìm hiểu tư duy xây dựng AI Agent và ứng dụng trong doanh nghiệp.<br>&nbsp;&nbsp;&nbsp;+ Giao lưu với cộng đồng AWS Study Group và CMC Global.<br>- Tiếp tục thực hành Amazon VPC vào chiều tối:<br>&nbsp;&nbsp;&nbsp;+ Tạo VPC, Subnet và Internet Gateway.<br>&nbsp;&nbsp;&nbsp;+ Cấu hình Route Table và Security Group.<br>&nbsp;&nbsp;&nbsp;+ Tìm hiểu VPC Flow Logs.<br>&nbsp;&nbsp;&nbsp;+ Triển khai và kiểm tra kết nối EC2 trong VPC. | 26/09/2026 | 26/09/2026 | [FCAJ Buildrathon Kickoff](https://www.facebook.com/share/p/1UwEL1LpPz/) <br> [Amazon VPC Workshop](https://000003.awsfcaj.com/) |
+
+---
+
+### Kết quả đạt được tuần 2:
+
+- Làm quen với môi trường làm việc tại văn phòng FCAJ:
+  + Nắm được nội quy, quy định và nề nếp làm việc.
+  + Biết cách đăng ký lịch lên văn phòng thông qua FCAJ Portal.
+  + Kết nối và làm quen với các thành viên, anh chị hỗ trợ FCAJ.
+
+- Hiểu và nắm được các thành phần cơ bản của AWS Identity and Access Management (IAM):
+  + IAM Users và Groups.
+  + IAM Policies và Roles.
+  + Root User và xác thực đa yếu tố (MFA).
+  + Nguyên tắc phân quyền tối thiểu (Least Privilege).
+
+- Thực hành quản lý danh tính và phân quyền truy cập trên AWS IAM:
+  + Tạo IAM Group và IAM User.
+  + Tạo IAM Role và IAM User.
+  + Chuyển đổi IAM Role (Switch Role).
+  + Dọn dẹp tài nguyên sau khi thực hành.
+
+- Nắm được các kiến thức cơ bản về Amazon VPC:
+  + VPC, CIDR và Subnet.
+  + Route Table, Internet Gateway và NAT Gateway.
+  + Security Group và Network ACL (NACL).
+  + VPC Flow Logs và Reachability Analyzer.
+  + Tổng quan về AWS Site-to-Site VPN.
+
+- Bước đầu thực hành xây dựng môi trường mạng trên Amazon VPC:
+  + Tạo VPC, Subnet và Internet Gateway.
+  + Cấu hình Route Table và Security Group.
+  + Tìm hiểu cách sử dụng VPC Flow Logs.
+  + Triển khai và kiểm tra kết nối EC2 trong VPC.
+
+- Tham gia sự kiện FCAJ Buildrathon 2026 Season 01 Kickoff:
+  + Tham dự Talkshow "The Thinking Behind Building The Bot".
+  + Tìm hiểu tư duy thiết kế và xây dựng AI Agent.
+  + Hiểu thêm về ứng dụng AI Agent trong môi trường doanh nghiệp.
+  + Giao lưu và kết nối với cộng đồng AWS Study Group và CMC Global.
