@@ -1,28 +1,66 @@
+
 ---
 title: "Week 2 Worklog"
-date: 2025-08-18
+date: 2026-09-21
 weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
 
-# Week 2: Deep Dive into Amazon VPC & Hybrid Networking Concepts
-
 ### Week 2 Objectives:
-* Master the architecture of Amazon Virtual Private Cloud (Amazon VPC).
-* Design a custom VPC with multi-AZ high availability (Public & Private subnets).
-* Configure Internet Gateway (IGW), NAT Gateway, Route Tables, and understand the difference between Security Groups and Network ACLs.
+- Become familiar with the working environment, regulations, and members of First Cloud AI Journey.
+- Learn and practice identity and access management using AWS IAM.
+- Gain fundamental knowledge of Amazon VPC, networking components, and network security on AWS.
+- Participate in the FCAJ Buildrathon 2026 event to learn and connect with the AWS community.
 
-### Tasks Carried Out This Week:
-| Day | Tasks | Start Date | Completion Date | Reference Materials |
-| :--- | :--- | :--- | :--- | :--- |
-| **Mon** | - Studied IPv4 CIDR block calculations and subnetting best practices (`10.0.0.0/16`).<br>- Created a custom VPC named `Lab-VPC` spanning two Availability Zones (`ap-southeast-1a`, `ap-southeast-1b`). | 18/08/2025 | 18/08/2025 | [Amazon VPC User Guide](https://docs.aws.amazon.com/vpc/) |
-| **Tue** | - Created 2 Public Subnets and 2 Private Subnets inside `Lab-VPC`.<br>- Attached an Internet Gateway (IGW) to allow internet ingress/egress for the public subnets.<br>- Built the Public Route Table with route destination `0.0.0.0/0` targeted to the IGW. | 19/08/2025 | 19/08/2025 | [VPC Routing Docs](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html) |
-| **Wed** | - Allocated an Elastic IP and provisioned a NAT Gateway in the Public Subnet.<br>- Configured the Private Route Table to route outbound traffic `0.0.0.0/0` through the NAT Gateway.<br>- Launched a test private EC2 instance to verify outbound internet access (e.g. running `yum update`). | 20/08/2025 | 20/08/2025 | [VPC NAT Gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html) |
-| **Thu** | - Analyzed security layers: Stateful Security Groups vs. Stateless Network ACLs (NACLs).<br>- Tested blocking specific IP addresses using NACL inbound deny rules.<br>- Learned about VPC Flow Logs and how to capture network traffic metadata. | 21/08/2025 | 21/08/2025 | [AWS Security Groups & NACLs](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html) |
-| **Fri** | - Introduction to VPC Peering and AWS Transit Gateway for multi-VPC topologies.<br>- Deleted NAT Gateway and released Elastic IP immediately after testing to prevent unexpected charges.<br>- Documented network architecture diagrams and submitted weekly worklog. | 22/08/2025 | 22/08/2025 | [VPC Peering Guide](https://docs.aws.amazon.com/vpc/latest/peering/) |
+---
 
-### Week 2 Achievements & Key Takeaways:
-* **Networking Blueprint:** Gained complete clarity on how traffic flows from the internet through an IGW to public instances, and how private instances reach the outside world securely via a NAT Gateway.
-* **Cost Sensitivity:** Realized that NAT Gateways incur hourly charges plus data processing fees, learning the engineering discipline of tearing down non-essential test infrastructure promptly.
-* **Security Layering:** Learned to place databases and core backends strictly in Private Subnets with no direct public IP addresses.
+### Tasks to be Carried Out This Week:
+
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 2 | - Register for an office visit on September 22 through the FCAJ Portal.<br>- Review the rules and regulations before visiting the office. | 21/09/2026 | 21/09/2026 | [FCAJ Portal](https://hcm-portal.awsfcaj.com/) <br> [FCAJ Regulations](https://hcm-rules.awsfcaj.com/1-regulations/) |
+| 3 | - Visit the office and get acquainted with FCAJ members and support staff.<br>- Attend an orientation session conducted by FCAJ staff on regulations, learning practices, and professional conduct at the internship workplace. | 22/09/2026 | 22/09/2026 | |
+| 4 | - Access AWS Study Group learning materials.<br>- Learn AWS IAM fundamentals:<br>&nbsp;&nbsp;&nbsp;+ IAM Users and Groups.<br>&nbsp;&nbsp;&nbsp;+ IAM Policies and Roles.<br>&nbsp;&nbsp;&nbsp;+ Root User and MFA.<br>&nbsp;&nbsp;&nbsp;+ Principle of Least Privilege.<br>&nbsp;&nbsp;&nbsp;+ ... | 23/09/2026 | 23/09/2026 | [AWS Study Group](https://cloudjourney.awsfcaj.com/) <br> [AWS IAM Workshop](https://000002.awsfcaj.com/1-introduction/) |
+| 5 | - Practice AWS IAM:<br>&nbsp;&nbsp;&nbsp;+ Create IAM Groups and IAM Users.<br>&nbsp;&nbsp;&nbsp;+ Create IAM Roles and IAM Users.<br>&nbsp;&nbsp;&nbsp;+ Switch IAM Roles (Switch Role).<br>&nbsp;&nbsp;&nbsp;+ Clean up resources. | 24/09/2026 | 24/09/2026 | [AWS IAM Workshop](https://000002.awsfcaj.com/) |
+| 6 | - Learn Amazon VPC fundamentals:<br>&nbsp;&nbsp;&nbsp;+ VPC, CIDR, and Subnets.<br>&nbsp;&nbsp;&nbsp;+ Route Tables, Internet Gateways, and NAT Gateways.<br>&nbsp;&nbsp;&nbsp;+ Security Groups and Network ACLs (NACLs).<br>&nbsp;&nbsp;&nbsp;+ VPC Flow Logs and Reachability Analyzer.<br>&nbsp;&nbsp;&nbsp;+ Overview of AWS Site-to-Site VPN. | 25/09/2026 | 25/09/2026 | [Amazon VPC Workshop](https://000003.awsfcaj.com/1-introduction/) |
+| 7 | - Participate in the FCAJ Buildrathon 2026 Season 01 Kickoff event at the AWS Vietnam office.<br>&nbsp;&nbsp;&nbsp;+ Attend the talk show "The Thinking Behind Building The Bot".<br>&nbsp;&nbsp;&nbsp;+ Learn about AI Agent development approaches and enterprise applications.<br>&nbsp;&nbsp;&nbsp;+ Network with the AWS Study Group community and CMC Global.<br>- Continue practicing Amazon VPC:<br>&nbsp;&nbsp;&nbsp;+ Create VPCs, Subnets, and Internet Gateways.<br>&nbsp;&nbsp;&nbsp;+ Configure Route Tables and Security Groups.<br>&nbsp;&nbsp;&nbsp;+ Explore VPC Flow Logs.<br>&nbsp;&nbsp;&nbsp;+ Deploy and test EC2 connectivity within a VPC.<br>&nbsp;&nbsp;&nbsp;+ ...<br>&nbsp;&nbsp;&nbsp;+ Clean up resources. | 26/09/2026 | 26/09/2026 | [FCAJ Buildrathon Kickoff](https://www.facebook.com/share/p/1UwEL1LpPz/) <br> [Amazon VPC Workshop](https://000003.awsfcaj.com/) |
+
+---
+
+### Week 2 Achievements:
+
+- Became familiar with the working environment at the FCAJ office:
+  + Understood workplace rules, regulations, and professional practices.
+  + Connected with and got acquainted with FCAJ members and support staff.
+
+- Understood the fundamental components of AWS Identity and Access Management (IAM):
+  + IAM Users and Groups.
+  + IAM Policies and Roles.
+  + Root User and Multi-Factor Authentication (MFA).
+  + Principle of Least Privilege.
+
+- Practiced identity and access management using AWS IAM:
+  + Created IAM Groups and IAM Users.
+  + Created IAM Roles and IAM Users.
+  + Switched IAM Roles (Switch Role).
+  + Cleaned up resources after completing the exercises.
+
+- Gained fundamental knowledge of Amazon VPC:
+  + VPC, CIDR, and Subnets.
+  + Route Tables, Internet Gateways, and NAT Gateways.
+  + Security Groups and Network ACLs (NACLs).
+  + VPC Flow Logs and Reachability Analyzer.
+  + Overview of AWS Site-to-Site VPN.
+
+- Gained initial hands-on experience in building a network environment using Amazon VPC:
+  + Created VPCs, Subnets, and Internet Gateways.
+  + Configured Route Tables and Security Groups.
+  + Learned how to use VPC Flow Logs.
+  + Deployed and tested EC2 connectivity within a VPC.
+
+- Participated in the FCAJ Buildrathon 2026 Season 01 Kickoff event:
+  + Attended the talk show "The Thinking Behind Building The Bot".
+  + Learned about AI Agent design and development approaches.
+  + Gained insights into AI Agent applications in enterprise environments.
+  + Networked with the AWS Study Group community and CMC Global.
