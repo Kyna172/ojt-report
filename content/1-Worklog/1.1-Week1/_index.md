@@ -26,8 +26,24 @@ pre: " <b> 1.1. </b> "
 ---
 
 ### Week 1 Achievements:
-- Completed the account registration steps as instructed.
-- Became familiar with FCAJ regulations and AWS Study Group learning resources.
-- Learned about the AWS Credit process and methods for monitoring AWS service costs.
-- Became familiar with the AWS Management Console and learned how to find, access, and use services through the web interface.
-- Summarized the week's learning activities and prepared for the following week.
+
+- Completed account registration and initial setup:
+  + AWS Account.
+  + FCAJ Portal.
+  + Initial $100 AWS Credits.
+
+- Became familiar with the First Cloud AI Journey program:
+  + FCAJ Regulations.
+  + AWS Study Group Materials.
+  + WhatsApp Group.
+
+- Learned about AWS Credits and cost management:
+  + Additional AWS Credits.
+  + Cost Monitoring.
+
+- Became familiar with AWS Management Console:
+  + AWS Console.
+  + Regions.
+  + Availability Zones.
+
+- Summarized learning activities and completed the Week 1 Worklog.
