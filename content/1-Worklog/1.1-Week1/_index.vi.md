@@ -26,8 +26,25 @@ pre: " <b> 1.1. </b> "
 ---
 
 ### Kết quả đạt được tuần 1:
-- Đã thực hiện các bước đăng ký tài khoản theo hướng dẫn.
-- Đã tiếp cận nội quy FCAJ và nguồn tài liệu AWS Study Group.
-- Đã tìm hiểu quy trình AWS Credit và các biện pháp theo dõi chi phí sử dụng dịch vụ AWS.
-- Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-- Tổng hợp nội dung học tập để chuẩn bị cho tuần tiếp theo.
+
+- Hoàn tất các bước đăng ký và thiết lập tài khoản:
+  + AWS Account.
+  + FCAJ Portal.
+  + $100 AWS Credits ban đầu.
+
+- Làm quen với chương trình First Cloud AI Journey:
+  + Nội quy, quy định FCAJ.
+  + Tài liệu AWS Study Group.
+  + Nhóm trao đổi WhatsApp.
+
+- Tìm hiểu AWS Credits và quản lý chi phí:
+  + AWS Credits bổ sung.
+  + Cost Monitoring.
+
+- Làm quen với AWS Management Console:
+  + AWS Console.
+  + Regions.
+  + Availability Zones.
+
+- Tổng hợp nội dung học tập và hoàn thành Worklog Tuần 1.
+
