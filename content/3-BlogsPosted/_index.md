@@ -1,5 +1,5 @@
 ---
-title: "Published Blog Posts"
+title: "Blogs Posted"
 date: 2026-11-10
 weight: 3
 chapter: false
