@@ -42,6 +42,10 @@ Regularly review indicators such as model usage, failed requests, and Prompt Cac
 
 These five stages form a continuous improvement cycle. Rather than focusing solely on billing reports, this approach helps organizations proactively monitor, control, and optimize Amazon Bedrock costs throughout application operations.
 
+## Picture
+
+<img width="1600" height="402" alt="image" src="https://github.com/user-attachments/assets/b96601b0-4014-402e-9a26-0095087698d6" />
+
 ## References
 
 AWS Machine Learning Blog – *Managing Amazon Bedrock costs end to end: A playbook for FinOps and platform teams* (October 30, 2026).
