@@ -1,94 +1,49 @@
 ---
 title: "Blog 1"
-date: 2025-08-11
+date: 2026-11-10
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# Least Privilege Security with Amazon EKS Pod Identity & Session Policies
+# 5 Steps to Manage Amazon Bedrock Costs: Beyond Simply Reducing Token Usage
 
-### Introduction & Context
-When running containerized workloads on Kubernetes with Amazon EKS, assigning AWS permissions to pods has always been a critical architectural decision. Historically, teams relied on **IAM Roles for Service Accounts (IRSA)**, which required setting up an OpenID Connect (OIDC) identity provider and complex trust policies per cluster.
+**This article was shared with the AWS Study Group community.**
 
-AWS recently introduced **Amazon EKS Pod Identity**, streamlining role assumption down to an EKS add-on agent. Furthermore, the addition of **Session Policies** allows engineers to dynamically narrow IAM permissions for specific pods without needing to create new IAM roles for every microservice.
+**Published post:** [View the article on Facebook](https://www.facebook.com/share/p/19UsES7evm/)
 
----
+## Article Content
 
-### Why Are Session Policies a Game-Changer?
-In a multi-tenant or microservices Kubernetes cluster:
-1. **The IAM Role Explosion Problem:** If Service A only needs read access to `bucket-a` and Service B only needs read access to `bucket-b`, engineers previously had to maintain two nearly identical IAM Roles.
-2. **Quota Limitations:** AWS accounts enforce limits on the number of IAM Roles per account (default: 1,000 roles). High-density clusters quickly approach this limit.
-3. **Session Policy Intersection:** With a Session Policy, the effective permissions are the **mathematical intersection** of the base IAM Role and the inline Session Policy:
+When deploying Generative AI applications on AWS, costs are often evaluated based on token consumption and the pricing of individual models. However, as the number of users and processing requests increases, an important question arises: How can organizations identify where costs originate, determine who is consuming resources, and manage budgets effectively?
 
-$$\text{Effective Permissions} = \text{IAM Role Permissions} \cap \text{Session Policy Permissions}$$
+To address this challenge, an AWS Machine Learning Blog article presents a five-stage approach to managing Amazon Bedrock costs:
 
-> **Important Rule:** A session policy can only *restrict* or *narrow* permissions; it can never grant more access than the underlying IAM role permits.
+### 1. Attribute Costs
 
----
+Identify which users, teams, or applications are responsible for resource consumption and associated costs. AWS Cost and Usage Report (CUR 2.0), IAM tags, and AWS Cost Explorer can help categorize and monitor costs across different workloads.
 
-### Architecture & How It Works
+### 2. Monitor Usage
 
-1. The Kubernetes Pod starts with an assigned ServiceAccount.
-2. The Amazon EKS Pod Identity Agent DaemonSet intercepts AWS STS calls from the AWS SDK inside the container.
-3. EKS requests temporary STS credentials from AWS IAM using the associated IAM Role and appends the configured **Session Policy**.
-4. The pod receives credentials valid strictly for its specific scoped operations.
+Use Model Invocation Logging to record model invocations. Logs can be delivered to Amazon CloudWatch Logs or Amazon S3, enabling analysis of token consumption and identification of applications with high resource usage.
 
----
+### 3. Enforce Budget Controls
 
-### Hands-on Configuration Example
+The AWS article describes three levels of cost control: using AWS Budgets to generate alerts when spending thresholds are exceeded, combining IAM with automation to restrict access, or implementing a gateway to reject requests when application-defined spending limits are reached.
 
-#### 1. Define the Base IAM Role
-The base IAM Role (`EKS-General-Storage-Role`) permits broad S3 read operations:
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "s3:GetObject",
-        "s3:ListBucket"
-      ],
-      "Resource": "*"
-    }
-  ]
-}
-```
+### 4. Optimize Costs
 
-#### 2. Restrict per Pod via Session Policy
-When creating the EKS Pod Identity Association via the AWS CLI, provide a Session Policy that restricts the pod to only read from `my-finance-reports-prod` bucket:
+Use Intelligent Prompt Routing to select suitable models for different tasks and Prompt Caching to reuse previously processed context, reducing the cost of repeated processing. Setting appropriate token limits can also help prevent unnecessary resource consumption.
 
-```bash
-aws eks create-pod-identity-association \
-  --cluster-name production-eks-cluster \
-  --namespace finance-apps \
-  --service-account finance-reporter \
-  --role-arn arn:aws:iam::123456789012:role/EKS-General-Storage-Role \
-  --client-token $(uuidgen)
-```
+### 5. Review and Improve
 
-The inline session policy applied to this association:
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "s3:GetObject"
-      ],
-      "Resource": "arn:aws:s3:::my-finance-reports-prod/*"
-    }
-  ]
-}
-```
+Regularly review indicators such as model usage, failed requests, and Prompt Caching effectiveness. These observations can guide adjustments to resource consumption and cost-management policies.
 
-Even though the base role allows reading all S3 buckets, this specific pod cannot read from any bucket other than `my-finance-reports-prod`.
+### Conclusion
 
----
+These five stages form a continuous improvement cycle. Rather than focusing solely on billing reports, this approach helps organizations proactively monitor, control, and optimize Amazon Bedrock costs throughout application operations.
 
-### Key Takeaways for DevOps Engineers
-* **Clean Governance:** Manage a handful of generalized base roles while tailoring exact permissions per Kubernetes deployment.
-* **Simplified Cluster Provisioning:** No need to configure an OIDC provider or manage complex IAM trust policies containing cluster OIDC issuer URLs.
-* **Audit Trail:** AWS CloudTrail records show both the assumed role and the session name, ensuring complete traceability for security audits.
+## References
+
+AWS Machine Learning Blog – *Managing Amazon Bedrock costs end to end: A playbook for FinOps and platform teams* (October 30, 2026).
+
+[Read the original article on AWS](https://aws.amazon.com/vi/blogs/machine-learning/managing-amazon-bedrock-costs-end-to-end-a-playbook-for-finops-and-platform-teams/)
