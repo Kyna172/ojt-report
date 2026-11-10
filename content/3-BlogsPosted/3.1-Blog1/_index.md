@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# 5 Steps to Manage Amazon Bedrock Costs: Beyond Simply Reducing Token Usage
+# 5 STEPS TO MANAGE AMAZON BEDROCK COSTS: BEYOND SIMPLY REDUCING TOKEN USAGE
 
 **This article was shared with the AWS Study Group community.**
 
@@ -14,37 +14,27 @@ pre: " <b> 3.1. </b> "
 
 ## Article Content
 
-When deploying Generative AI applications on AWS, costs are often evaluated based on token consumption and the pricing of individual models. However, as the number of users and processing requests increases, an important question arises: How can organizations identify where costs originate, determine who is consuming resources, and manage budgets effectively?
+When deploying Generative AI applications with Amazon Bedrock, costs depend on more than token consumption and model pricing. Identifying cost sources, monitoring resource usage, and implementing appropriate controls are also essential.
 
-To address this challenge, an AWS Machine Learning Blog article presents a five-stage approach to managing Amazon Bedrock costs:
+An AWS Machine Learning Blog article introduces a **five-step cost management approach** to help organizations monitor, control, and optimize Amazon Bedrock expenses throughout application operations.
 
-### 1. Attribute Costs
+### Key Takeaways
 
-Identify which users, teams, or applications are responsible for resource consumption and associated costs. AWS Cost and Usage Report (CUR 2.0), IAM tags, and AWS Cost Explorer can help categorize and monitor costs across different workloads.
+- **1. Attribute Costs:** Use AWS Cost and Usage Report (CUR 2.0), IAM tags, and AWS Cost Explorer to analyze spending across users, teams, or applications.
+- **2. Monitor Usage:** Enable Model Invocation Logging to track model invocations and analyze token consumption using Amazon CloudWatch Logs or Amazon S3.
+- **3. Enforce Budget Controls:** Combine AWS Budgets for alerts, IAM and automation for access restrictions, or an application gateway to control requests before model invocation.
+- **4. Optimize Costs:** Use Intelligent Prompt Routing, Prompt Caching, and appropriate token limits to reduce unnecessary resource consumption.
+- **5. Review and Improve:** Monitor model usage, failed requests, and Prompt Caching effectiveness to continuously refine cost-management policies.
 
-### 2. Monitor Usage
+### Practical Applications
 
-Use Model Invocation Logging to record model invocations. Logs can be delivered to Amazon CloudWatch Logs or Amazon S3, enabling analysis of token consumption and identification of applications with high resource usage.
+This approach is useful for Generative AI applications that need to manage costs across multiple users, teams, or workloads, especially as request volumes and token consumption increase.
 
-### 3. Enforce Budget Controls
+Instead of reviewing billing reports only at the end of each month, organizations can combine usage data, budget alerts, and optimization techniques to proactively manage Amazon Bedrock costs.
 
-The AWS article describes three levels of cost control: using AWS Budgets to generate alerts when spending thresholds are exceeded, combining IAM with automation to restrict access, or implementing a gateway to reject requests when application-defined spending limits are reached.
+## Image
 
-### 4. Optimize Costs
-
-Use Intelligent Prompt Routing to select suitable models for different tasks and Prompt Caching to reuse previously processed context, reducing the cost of repeated processing. Setting appropriate token limits can also help prevent unnecessary resource consumption.
-
-### 5. Review and Improve
-
-Regularly review indicators such as model usage, failed requests, and Prompt Caching effectiveness. These observations can guide adjustments to resource consumption and cost-management policies.
-
-### Conclusion
-
-These five stages form a continuous improvement cycle. Rather than focusing solely on billing reports, this approach helps organizations proactively monitor, control, and optimize Amazon Bedrock costs throughout application operations.
-
-## Picture
-
-<img width="1600" height="402" alt="image" src="https://github.com/user-attachments/assets/b96601b0-4014-402e-9a26-0095087698d6" />
+<img width="1600" height="402" alt="Five-step Amazon Bedrock cost management workflow" src="https://github.com/user-attachments/assets/e2ab06fc-5b89-4b5e-afc2-5c18ee98af38" />
 
 ## References
 
