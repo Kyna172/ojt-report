@@ -1,5 +1,5 @@
 ---
-title: "Amazon Bedrock: Kiểm soát request và token usage trước khi chi phí tăng cao"
+title: "Blog 4"
 date: 2026-11-10
 weight: 4
 chapter: false
