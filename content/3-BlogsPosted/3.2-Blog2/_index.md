@@ -1,94 +1,44 @@
 ---
 title: "Blog 2"
-date: 2025-08-11
+date: 2026-11-10
 weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# High-Performance & Secure Static Web Hosting with S3 & CloudFront OAC
+# WHY CAN YOUR AWS BILL EXCEED A $10 BUDGET?
 
-### The Dilemma: Fast, Cheap, but Is It Secure?
-Hosting single-page applications (React, Vue, Hugo, Next.js static exports) on **Amazon S3** is a beloved design pattern due to its near-infinite scalability, 99.999999999% (11 9's) data durability, and virtually negligible costs.
+**This article was shared with the AWS Study Group community.**
 
-However, many beginner guides suggest checking **"Static Website Hosting"** on the S3 bucket and adding a public `s3:GetObject` bucket policy. 
-This approach comes with severe downsides:
-* The S3 bucket URL is completely public and vulnerable to scrapers, DDoS, and hotlinking.
-* AWS S3 direct endpoints do not natively support modern HTTPS certificates on custom domain names.
-* Data Transfer Out (DTO) directly from S3 is more expensive than routing through the global Content Delivery Network (CDN).
+**Published post:** [View the article on Facebook](https://www.facebook.com/share/p/1FEBCbpDM7/)
 
----
+## Article Content
 
-### The Modern Standard: CloudFront with Origin Access Control (OAC)
-In 2022, AWS released **Origin Access Control (OAC)** to replace the legacy Origin Access Identity (OAI). OAC brings major improvements:
-* Supports all S3 regions, including newly added ones.
-* Supports Server-Side Encryption with AWS KMS (SSE-KMS).
-* Supports dynamic HTTP `PUT`, `DELETE` methods if needed, alongside standard `GET` requests.
+AWS Budgets helps users monitor cloud spending and receive alerts when costs reach predefined thresholds. However, setting a $10 budget does not mean AWS will automatically stop services once that amount is reached.
 
-```
-[ User Browser ]
-       | (HTTPS / HTTP3 - Worldwide Edge Locations)
-       v
-[ Amazon CloudFront CDN ]
-       | (Signed AWS SigV4 Request via OAC)
-       v
-[ Private Amazon S3 Bucket ] (Block All Public Access: ON)
-```
+To reduce unexpected expenses, users need to understand the difference between budget notifications and actual cost-control mechanisms.
 
----
+### Key Takeaways
 
-### Implementation Guide
+- **AWS Budgets:** Monitors actual or forecasted costs and sends notifications through email or Amazon SNS when configured thresholds are reached.
+- **Budgets are not hard spending limits:** AWS services may continue running and generating charges even after the budget is exceeded.
+- **Budgets Actions:** Allows users to apply IAM policies or perform actions on specified EC2/RDS instances when budget thresholds are reached.
+- **AWS Cost Anomaly Detection:** Uses Machine Learning to identify unusual spending patterns and notify users of potential cost anomalies.
+- **AWS Cost Explorer:** Helps analyze expenses by service, Region, or usage type to identify the sources of unexpected costs.
+- **Cost Data Latency:** Billing information is not updated continuously in real time, so actual spending may exceed the configured threshold before an alert is delivered.
 
-#### 1. Keep S3 Completely Private
-Turn on **"Block all public access"** on your S3 bucket. Do not enable "Static website hosting". Keep it as a standard private storage bucket.
+### Practical Applications
 
-#### 2. Create the CloudFront Distribution
-* Set the **Origin domain** to your S3 bucket's regional endpoint: `your-bucket-name.s3.ap-southeast-1.amazonaws.com`.
-* Under **Origin access**, select **Origin access control settings (recommended)** and click **Create new OAC**.
-* Select **Redirect HTTP to HTTPS** in the default cache behavior.
-* Set default root object to `index.html`.
+For learning accounts and testing environments, AWS Budgets, Cost Anomaly Detection, Cost Explorer, and Budgets Actions can be combined to monitor spending, detect unusual cost increases, and implement appropriate cost-control measures.
 
-#### 3. Attach the S3 Bucket Policy
-CloudFront generates a tailored bucket policy. Apply this policy to your S3 bucket:
+The key takeaway is that AWS Budgets does not guarantee that an account's charges will never exceed the configured budget.
 
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": {
-    "Sid": "AllowCloudFrontServicePrincipalReadOnly",
-    "Effect": "Allow",
-    "Principal": {
-      "Service": "cloudfront.amazonaws.com"
-    },
-    "Action": "s3:GetObject",
-    "Resource": "arn:aws:s3:::your-bucket-name/*",
-    "Condition": {
-      "StringEquals": {
-        "AWS:SourceArn": "arn:aws:cloudfront::123456789012:distribution/EDFDVBD6EXAMPLE"
-      }
-    }
-  }
-}
-```
+## Picture
 
-Notice the crucial `AWS:SourceArn` condition key: It guarantees that **only your specific CloudFront distribution** can read objects from your bucket, preventing unauthorized distributions in other accounts from accessing your assets.
+<img width="1080" height="540" alt="image" src="https://github.com/user-attachments/assets/1e8e10e6-66dd-4dba-b944-791eb0b8724b" />
 
----
+## References
 
-### Performance & Cost Optimization Tips
-
-1. **Leverage Cache-Control Headers:**  
-   Configure your build pipeline to upload static assets (like `.js` and `.css` files with content hashes) with long cache lifetimes:
-   ```bash
-   aws s3 cp ./build/static s3://your-bucket-name/static \
-     --cache-control "public, max-age=31536000, immutable"
-   ```
-2. **Handle Single Page App Client-Side Routing:**  
-   Add a custom error response in CloudFront: Map HTTP 403 / 404 error codes to respond with `/index.html` and HTTP status 200, allowing React Router to handle page routes smoothly.
-3. **Invalidate Only What Changed:**  
-   Avoid paying for excessive `/*` invalidations on busy repositories. Whenever possible, invalidate specific file paths (e.g., `/index.html`).
-
----
-
-### Conclusion
-By combining Amazon S3 with CloudFront and Origin Access Control, you get an enterprise-grade web hosting setup that is blazing fast, strictly secured, and costs merely pennies per month.
+- [AWS Documentation – Using AWS Budgets](https://docs.aws.amazon.com/cost-management/latest/userguide/bcm-lite-use-budget.html)
+- [AWS Documentation – Configuring Budget Actions](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-controls.html)
+- [AWS Documentation – Cost Anomaly Detection](https://docs.aws.amazon.com/cost-management/latest/userguide/manage-ad.html)
