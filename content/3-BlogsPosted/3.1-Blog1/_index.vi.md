@@ -1,5 +1,5 @@
 ---
-title: "5 bước quản lý chi phí Amazon Bedrock: Không chỉ đơn giản là giảm số lượng token"
+title: "Blog 1"
 date: 2026-11-10
 weight: 1
 chapter: false
