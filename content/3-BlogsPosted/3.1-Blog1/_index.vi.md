@@ -42,8 +42,13 @@ Thường xuyên theo dõi các chỉ số như tỷ lệ sử dụng mô hình,
 
 Năm bước trên tạo thành quy trình liên tục, một vòng lặp có thể lặp lại, giúp việc quản lý chi phí Amazon Bedrock không chỉ dừng ở theo dõi hóa đơn mà còn chủ động kiểm soát và tối ưu trong quá trình vận hành.
 
+## Hình ảnh
+
+<img width="1600" height="402" alt="image" src="https://github.com/user-attachments/assets/e2ab06fc-5b89-4b5e-afc2-5c18ee98af38" />
+
 ## Tài liệu tham khảo
 
 AWS Machine Learning Blog – *Managing Amazon Bedrock costs end to end: A playbook for FinOps and platform teams* (30/10/2026).
 
 [Đọc bài viết gốc trên AWS](https://aws.amazon.com/vi/blogs/machine-learning/managing-amazon-bedrock-costs-end-to-end-a-playbook-for-finops-and-platform-teams/)
+
