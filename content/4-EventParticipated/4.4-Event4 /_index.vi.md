@@ -8,14 +8,6 @@ pre: "<b> 4.4. </b>"
 
 ## Video sự kiện: [Xem trên YouTube](https://www.youtube.com/watch?v=dJiP5890kTg)
 
----
-title: "First Cloud AI Journey: Weekly Meet Up 24/10"
-date: 2026-10-24
-weight: 1
-chapter: false
-pre: "  4.4.  "
----
-
 ### Mục đích của sự kiện
 
 * Cập nhật kiến thức chuyên sâu và trải nghiệm thực tế về công nghệ Cloud & AI Agent từ các Tech Lead và kỹ sư doanh nghiệp.
