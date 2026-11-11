@@ -3,7 +3,7 @@ title: "First Cloud AI Journey: Weekly Meet Up 24/10"
 date: 2026-10-24
 weight: 1
 chapter: false
-pre: "  4.4.  "
+pre: "<b> 4.4. </b>"
 ---
 
 ## Video sự kiện: [Xem trên YouTube](https://www.youtube.com/watch?v=dJiP5890kTg)
