@@ -6,7 +6,7 @@ chapter: false
 pre: "<b> 4.3. </b>"
 ---
 
-## Video sự kiện: [Xem trên YouTube](https://www.youtube.com/watch?v=jWjOIfMA9qc)
+## Video sự kiện: [Xem trên YouTube](https://www.youtube.com/watch?v=jWjOIfMA9qc&t=1s)
 
 ### Mục đích của sự kiện
 
