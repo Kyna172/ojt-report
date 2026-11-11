@@ -17,11 +17,11 @@ pre: " <b> 1.1. </b> "
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 2 | - Receive internship onboarding information and join the group on WhatsApp.<br>- Register AWS and FCAJ Portal accounts.<br>&nbsp;&nbsp;&nbsp;+ Create an AWS account.<br>&nbsp;&nbsp;&nbsp;+ Receive the initial $100 in AWS Credits after successful registration. | 14/09/2026 | 14/09/2026 | [AWS Sign In](https://signin.aws.amazon.com/) <br> [FCAJ Portal](https://hcm-portal.awsfcaj.com/) |
-| 3 | - Review workplace rules, regulations, and guidelines of the FCAJ program. | 15/09/2026 | 15/09/2026 | [FCAJ Regulations](https://hcm-rules.awsfcaj.com/1-regulations/) |
-| 4 | - Access AWS Study Group learning materials.<br>- Learn about the process of obtaining an additional $100 in AWS Credits and how to monitor AWS costs. | 16/09/2026 | 16/09/2026 | [AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
-| 5 | - Watch AWS Study Group tutorial videos.<br>- Learn about the AWS Management Console, Regions, and Availability Zones. | 17/09/2026 | 17/09/2026 | [AWS Study Group YouTube](https://www.youtube.com/watch?v=Gz56QzLQ_Yo&list=PLahN4TLWtox3TSYFbN1DNX7NZgTVXNj3x) <br> [AWS IAM](https://docs.aws.amazon.com/iam/) |
-| 6 | - Verify account information and complete the Week 1 Worklog. | 18/09/2026 | 18/09/2026 | [FCAJ Portal](https://hcm-portal.awsfcaj.com/) <br> [AWS Sign In](https://signin.aws.amazon.com/) |
+| 2 | - Receive internship onboarding information and join the WhatsApp group.<br>- Register AWS and FCAJ Portal accounts:<br>&nbsp;&nbsp;&nbsp;+ Create AWS Account.<br>&nbsp;&nbsp;&nbsp;+ Receive the initial $100 AWS Credits after successful registration. | 14/09/2026 | 14/09/2026 | [AWS Sign In](https://signin.aws.amazon.com/) <br> [FCAJ Portal](https://hcm-portal.awsfcaj.com/) |
+| 3 | - Review FCAJ regulations, workplace rules, and program guidelines. | 15/09/2026 | 15/09/2026 | [FCAJ Regulations](https://hcm-rules.awsfcaj.com/1-regulations/) |
+| 4 | - Access AWS Study Group learning materials.<br>- Learn about the process of obtaining an additional $100 AWS Credits and monitoring AWS costs. | 16/09/2026 | 16/09/2026 | [AWS Study Group](https://cloudjourney.awsfcaj.com/) (Former domain: https://cloudjourney.awsstudygroup.com/)<br>[Additional $100 AWS Credits Guide](https://000001.awsfcaj.com/4-h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-chi-ti%E1%BA%BFt-5-nhi%E1%BB%87m-v%E1%BB%A5-ki%E1%BA%BFm-ti%E1%BB%81n/) |
+| 5 | - Watch AWS Study Group videos.<br>- Learn AWS Management Console fundamentals:<br>&nbsp;&nbsp;&nbsp;+ Regions.<br>&nbsp;&nbsp;&nbsp;+ Availability Zones.<br>&nbsp;&nbsp;&nbsp;+ ... | 17/09/2026 | 17/09/2026 | [AWS Study Group YouTube](https://www.youtube.com/watch?v=Gz56QzLQ_Yo&list=PLahN4TLWtox3TSYFbN1DNX7NZgTVXNj3x) <br> [AWS IAM](https://docs.aws.amazon.com/iam/) |
+| 6 | - Explore the FCAJ template structure on GitHub.<br>- Create a personal GitHub repository based on the provided template:<br>&nbsp;&nbsp;&nbsp;+ Repository Setup.<br>&nbsp;&nbsp;&nbsp;+ Folder Structure.<br>&nbsp;&nbsp;&nbsp;+ Worklog.<br>&nbsp;&nbsp;&nbsp;+ ... | 18/09/2026 | 18/09/2026 | [FCAJ Workshop Template](https://github.com/thienluhoan/fcj-workshop-template/tree/main) |
 
 ---
 
@@ -46,4 +46,8 @@ pre: " <b> 1.1. </b> "
   + Regions.
   + Availability Zones.
 
-- Summarized learning activities and completed the Week 1 Worklog.
+- Set up a personal GitHub repository using the FCAJ template:
+  + Repository Setup.
+  + Folder Structure.
+  + Worklog.
+  + ...
