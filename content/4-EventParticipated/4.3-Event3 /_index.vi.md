@@ -6,11 +6,7 @@ weight: 1
 chapter: false
 pre: "  4.2.  "
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-# Bài thu hoạch “[Fireside Chat with Dr. Werner: Navigating the Future of Cloud & AI in Vietnam](https://www.youtube.com/watch?v=jWjOIfMA9qc)”
+---
 
 ### Mục Đích Của Sự Kiện
 
@@ -80,11 +76,11 @@ Tham gia theo dõi buổi [Fireside Chat with Dr. Werner: Navigating the Future 
 * Công cụ AI là đòn bẩy mạnh mẽ giúp tăng tốc độ phát triển, nhưng năng lực cốt lõi và tư duy kỹ thuật của con người vẫn đóng vai trò quyết định.
 * Việc cập nhật xu hướng cloud và AI là chìa khóa để phát triển sự nghiệp trong ngành công nghệ.
 
+> Tổng thể, buổi trò chuyện không chỉ cung cấp các kiến thức định hướng về công nghệ đám mây và AI mà còn truyền cảm hứng mạnh mẽ về cách tư duy và phát triển bản thân trong ngành kỹ thuật phần mềm.
+
 #### Một số hình ảnh khi tham gia sự kiện
 <img width="1280" height="720" alt="1792746208012_4892130363282366041_4892130363282366041_b662d1efb004e0e07d0b1a314a2a24a3" src="https://github.com/user-attachments/assets/06659f06-1b00-40da-b324-acc33fac4c05" />
 <img width="1280" height="720" alt="1792746244150_186912018913895205_4892130363282366041_04e919d145c4e4543f683af54851d70b" src="https://github.com/user-attachments/assets/8adfadc1-8d53-4ac6-8544-bddce7ed7d30" />
 
 * Thêm các hình ảnh của các bạn tại đây
 <img width="2560" height="1920" alt="1793075839227_2227615470454066519_2227615470454066519_27e8770d0406ce464384edc1083b22d0" src="https://github.com/user-attachments/assets/52843724-0091-4cd1-be57-3622296f1393" />
-
-> Tổng thể, buổi trò chuyện không chỉ cung cấp các kiến thức định hướng về công nghệ đám mây và AI mà còn truyền cảm hứng mạnh mẽ về cách tư duy và phát triển bản thân trong ngành kỹ thuật phần mềm."
