@@ -1,28 +1,68 @@
 ---
 title: "Week 4 Worklog"
-date: 2025-09-01
+date: 2026-10-05
 weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
-# Week 4: Object Storage & Content Delivery Network (Amazon S3 & CloudFront)
-
 ### Week 4 Objectives:
-* Master Amazon Simple Storage Service (Amazon S3) storage classes, bucket policies, and lifecycle management.
-* Host a single-page application (SPA) securely on Amazon S3.
-* Accelerate global content delivery and enforce HTTPS using Amazon CloudFront with Origin Access Control (OAC).
+- Learn about Amazon RDS and the process of deploying and managing databases.
+- Learn about AWS Budgets and the process of setting up and managing budgets on AWS.
+- Participate in team discussions, evaluate the initial project idea, and agree on a new project direction.
 
-### Tasks Carried Out This Week:
-| Day | Tasks | Start Date | Completion Date | Reference Materials |
-| :--- | :--- | :--- | :--- | :--- |
-| **Mon** | - Studied Amazon S3 storage tiers: Standard, Intelligent-Tiering, Standard-IA, One Zone-IA, Glacier Flexible, and Glacier Deep Archive.<br>- Created S3 buckets and practiced versioning, server-side encryption (SSE-S3 & SSE-KMS). | 01/09/2025 | 01/09/2025 | [Amazon S3 Storage Classes](https://aws.amazon.com/s3/storage-classes/) |
-| **Tue** | - Defined S3 Lifecycle Rules to transition older objects to Glacier after 30 days and expire incomplete multipart uploads.<br>- Configured S3 Object Lock and Cross-Region Replication (CRR) concepts. | 02/09/2025 | 02/09/2025 | [S3 Lifecycle Management](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html) |
-| **Wed** | - Deployed a static HTML/React portfolio website onto an S3 bucket.<br>- Explored S3 Static Website Hosting vs. private bucket architectures.<br>- Analyzed security considerations regarding public read bucket policies. | 03/09/2025 | 03/09/2025 | [Hosting Static Websites on S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html) |
-| **Thu** | - Provisioned an Amazon CloudFront distribution pointing to the private S3 bucket origin.<br>- Configured Origin Access Control (OAC) to restrict bucket access exclusively to CloudFront.<br>- Enabled HTTPS redirection, gzip/brotli compression, and custom cache TTL policies. | 04/09/2025 | 04/09/2025 | [CloudFront OAC Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html) |
-| **Fri** | - Tested cache invalidation (`/*`) when updating website assets.<br>- Measured response latency before and after CloudFront edge caching using curl/devtools.<br>- Summarized findings and submitted weekly worklog. | 05/09/2025 | 05/09/2025 | [CloudFront Caching](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html) |
+---
 
-### Week 4 Achievements & Key Takeaways:
-* **Storage Cost Optimization:** Mastered S3 Lifecycle policies, understanding how automated archiving can slash cloud storage expenses by up to 90% for cold data.
-* **Security Through OAC:** Eliminated the common anti-pattern of opening S3 buckets publicly, adopting modern Origin Access Control (OAC) so users can only reach content via CloudFront edge caches.
-* **Global Latency Reduction:** Observed instant page loading worldwide due to edge location caching, SSL termination, and HTTP/2 and HTTP/3 support.
+### Tasks to be Carried Out This Week:
+
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 2 | - Learn Amazon RDS fundamentals:<br>&nbsp;&nbsp;&nbsp;+ DB Engines.<br>&nbsp;&nbsp;&nbsp;+ Managed Database.<br>&nbsp;&nbsp;&nbsp;+ DB Instances.<br>&nbsp;&nbsp;&nbsp;+ DB Subnet Groups.<br>&nbsp;&nbsp;&nbsp;+ Security & Encryption.<br>&nbsp;&nbsp;&nbsp;+ Backup & Restore.<br>&nbsp;&nbsp;&nbsp;+ Pricing.<br>&nbsp;&nbsp;&nbsp;+ ... | 05/10/2026 | 05/10/2026 | [Amazon RDS Workshop](https://000005.awsfcaj.com/1-introduce/) |
+| 3 | - Learn about the Amazon RDS deployment process:<br>&nbsp;&nbsp;&nbsp;+ VPC & Subnet.<br>&nbsp;&nbsp;&nbsp;+ Security Groups.<br>&nbsp;&nbsp;&nbsp;+ Create RDS Instance.<br>&nbsp;&nbsp;&nbsp;+ Launch EC2 Instance.<br>&nbsp;&nbsp;&nbsp;+ Application Deployment.<br>&nbsp;&nbsp;&nbsp;+ Backup & Restore.<br>&nbsp;&nbsp;&nbsp;+ Resource Cleanup.<br>- Visit the office and continue discussing the team project with other members:<br>&nbsp;&nbsp;&nbsp;+ Discuss and develop the idea of an AI-powered suspicious email detection tool.<br>&nbsp;&nbsp;&nbsp;+ Explore the initial features and implementation approach. | 06/10/2026 | 06/10/2026 | [Amazon RDS Workshop](https://000005.awsfcaj.com/) |
+| 4 | - Learn AWS Budgets fundamentals:<br>&nbsp;&nbsp;&nbsp;+ Cost Budget.<br>&nbsp;&nbsp;&nbsp;+ Usage Budget.<br>&nbsp;&nbsp;&nbsp;+ RI Budget.<br>&nbsp;&nbsp;&nbsp;+ Savings Plans Budget.<br>&nbsp;&nbsp;&nbsp;+ Budget Alerts.<br>&nbsp;&nbsp;&nbsp;+ Cost Monitoring.<br>&nbsp;&nbsp;&nbsp;+ ... | 07/10/2026 | 07/10/2026 | [AWS Budgets Introduction](https://000007.awsfcaj.com/1-introduction/) |
+| 5 | - Learn about the AWS Budgets setup process:<br>&nbsp;&nbsp;&nbsp;+ Create Budget.<br>&nbsp;&nbsp;&nbsp;+ Monthly Cost Budget.<br>&nbsp;&nbsp;&nbsp;+ Budget Templates.<br>&nbsp;&nbsp;&nbsp;+ Alert Thresholds.<br>&nbsp;&nbsp;&nbsp;+ Email Notifications.<br>&nbsp;&nbsp;&nbsp;+ Cost Monitoring.<br>&nbsp;&nbsp;&nbsp;+ Budget Cleanup. | 08/10/2026 | 08/10/2026 | [AWS Budgets Workshop](https://000007.awsfcaj.com/) |
+| 6 | - Visit the office to continue discussing and evaluating the team project idea:<br>&nbsp;&nbsp;&nbsp;+ Reassess the suitability of the AI-powered email analysis idea.<br>&nbsp;&nbsp;&nbsp;+ Discuss alternative ideas and future project directions.<br>&nbsp;&nbsp;&nbsp;+ Agree to switch to Reloop, a platform supporting the exchange and reuse of second-hand items. | 09/10/2026 | 09/10/2026 | |
+
+---
+
+### Week 4 Achievements:
+
+- Learned Amazon RDS fundamentals:
+  + DB Engines.
+  + Managed Database.
+  + DB Instances.
+  + DB Subnet Groups.
+  + Security & Encryption.
+  + Backup & Restore.
+  + Pricing.
+  + ...
+
+- Learned about Amazon RDS deployment and management:
+  + Create RDS Instance.
+  + Launch EC2 Instance.
+  + Application Deployment.
+  + Backup & Restore.
+  + Resource Cleanup.
+
+- Learned AWS Budgets fundamentals:
+  + Cost Budget.
+  + Usage Budget.
+  + RI Budget.
+  + Savings Plans Budget.
+  + Budget Alerts.
+  + Cost Monitoring.
+  + ...
+
+- Learned about setting up and managing budgets on AWS:
+  + Create Budget.
+  + Monthly Cost Budget.
+  + Budget Templates.
+  + Alert Thresholds.
+  + Email Notifications.
+  + Budget Cleanup.
+
+- Participated in team discussions and adjusted the project direction:
+  + Continued developing the idea of an AI-powered suspicious email detection tool.
+  + Evaluated the suitability and development potential of the initial idea.
+  + Agreed to switch the project direction to Reloop.
+  + Began defining the development direction of the new project.
