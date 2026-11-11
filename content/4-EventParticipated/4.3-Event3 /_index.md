@@ -3,7 +3,7 @@ title: "Fireside Chat with Dr. Werner: Navigating the Future of Cloud & AI in Vi
 date: 2026-10-02
 weight: 1
 chapter: false
-pre: "  4.3.  "
+pre: "<b> 4.3. </b>"
 ---
 
 ## Event Video: [Watch on YouTube](https://www.youtube.com/watch?v=jWjOIfMA9qc)
