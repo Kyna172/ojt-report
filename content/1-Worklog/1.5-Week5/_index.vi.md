@@ -1,28 +1,71 @@
 ---
 title: "Worklog Tuần 5"
-date: 2025-09-08
+date: 2026-10-12
 weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
 
-# Tuần 5: Quản trị cơ sở dữ liệu quan hệ và NoSQL (Amazon RDS & DynamoDB)
-
 ### Mục tiêu tuần 5:
-* Hiểu rõ ưu thế của dịch vụ cơ sở dữ liệu có quản lý (Managed Databases) so với việc tự dựng DB trên EC2.
-* Triển khai cụm Amazon RDS PostgreSQL với tính năng sao chép dự phòng đa vùng Multi-AZ và Read Replica.
-* Nắm chắc tư duy thiết kế dữ liệu NoSQL trên Amazon DynamoDB: Partition Key, Sort Key và Global Secondary Index (GSI).
+- Tìm hiểu và thực hành giám sát tài nguyên AWS với Amazon CloudWatch.
+- Tìm hiểu và thực hành cấu hình Hybrid DNS với Amazon Route 53 Resolver.
+- Thảo luận, tìm hiểu yêu cầu và định hướng phát triển dự án Reloop.
+- Tham gia họp nhóm và thống nhất phân chia vai trò cho các thành viên.
 
-### Các công việc triển khai trong tuần:
-| Thứ | Nội dung công việc | Bắt đầu | Hoàn thành | Tài liệu tham khảo |
-| :--- | :--- | :--- | :--- | :--- |
-| **Thứ 2** | - Tạo DB Subnet Group chứa các Private Subnet trên nhiều AZ trong `Lab-VPC`.<br>- Khởi tạo cơ sở dữ liệu RDS PostgreSQL kiểu Multi-AZ, cấu hình Security Group chỉ cho phép kết nối từ dải IP của tầng ứng dụng. | 08/09/2025 | 08/09/2025 | [Hướng dẫn Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html) |
-| **Thứ 3** | - Kết nối bảo mật vào RDS từ máy chủ nội bộ qua công cụ psql.<br>- Bật cơ chế sao lưu tự động (Automated Backups) và chụp snapshot thủ công.<br>- Thử nghiệm tính năng ép chuyển đổi dự phòng (Reboot with Failover) để quan sát thời gian phục hồi và thay đổi DNS của RDS. | 09/09/2025 | 09/09/2025 | [Cơ chế Multi-AZ RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html) |
-| **Thứ 4** | - Tạo một bản sao chỉ đọc (Read Replica) để chia tải đọc cho hệ thống báo cáo/truy vấn nặng.<br>- Cấu hình DB Parameter Group và quan sát chỉ số hiệu năng trên RDS Performance Insights. | 10/09/2025 | 10/09/2025 | [RDS Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html) |
-| **Thứ 5** | - Tìm hiểu sự khác biệt cơ bản giữa SQL và NoSQL, kiến trúc phân tán phi máy chủ của DynamoDB.<br>- Tạo bảng DynamoDB với Khóa phân vùng (Partition Key - `userId`) và Khóa sắp xếp (Sort Key - `timestamp`).<br>- So sánh chế độ On-Demand và Provisioned (RCU/WCU). | 11/09/2025 | 11/09/2025 | [Tài liệu DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/) |
-| **Thứ 6** | - Tạo chỉ mục phụ toàn cục (Global Secondary Index - GSI) để truy vấn theo các thuộc tính khác linh hoạt.<br>- Viết script Python (thư viện boto3) để chèn và truy vấn dữ liệu vào DynamoDB.<br>- Xóa RDS để tiết kiệm chi phí học tập và nộp báo cáo tuần 5. | 12/09/2025 | 12/09/2025 | [Chỉ mục GSI DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GSI.html) |
+---
 
-### Kết quả đạt được & Bài học rút ra:
-* **Khả năng chịu lỗi của dữ liệu:** Chứng kiến cơ chế đồng bộ dữ liệu tự động giữa 2 AZ của RDS, máy chủ chính hỏng thì máy chủ dự phòng lập tức tiếp quản gần như tức thời.
-* **Tối ưu hóa hiệu năng đọc:** Nhận thấy Read Replica là chìa khóa vàng giúp giải phóng gánh nặng truy vấn thống kê khỏi cơ sở dữ liệu nghiệp vụ chính.
-* **Thay đổi tư duy thiết kế schema:** Với DynamoDB, việc thiết kế bảng phải dựa hoàn toàn trên các mẫu truy vấn (Access Patterns) mong muốn ngay từ đầu, thay vì chuẩn hóa dữ liệu như bảng quan hệ truyền thống.
+### Công việc thực hiện trong tuần:
+
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 2 | - Tìm hiểu và thực hành Amazon CloudWatch:<br>&nbsp;&nbsp;&nbsp;+ CloudWatch Metrics.<br>&nbsp;&nbsp;&nbsp;+ CloudWatch Logs.<br>&nbsp;&nbsp;&nbsp;+ Metric Filters.<br>&nbsp;&nbsp;&nbsp;+ Custom Metrics.<br>&nbsp;&nbsp;&nbsp;+ CloudWatch Alarms.<br>&nbsp;&nbsp;&nbsp;+ CloudWatch Dashboards.<br>&nbsp;&nbsp;&nbsp;+ Resource Cleanup.<br>&nbsp;&nbsp;&nbsp;+ ... | 12/10/2026 | 12/10/2026 | [Amazon CloudWatch Workshop](https://000008.awsfcaj.com/) |
+| 3 | - Tìm hiểu Amazon Route 53 Resolver và Hybrid DNS:<br>&nbsp;&nbsp;&nbsp;+ Amazon Route 53.<br>&nbsp;&nbsp;&nbsp;+ Hybrid DNS.<br>&nbsp;&nbsp;&nbsp;+ Private Hosted Zones.<br>&nbsp;&nbsp;&nbsp;+ Inbound Endpoints.<br>&nbsp;&nbsp;&nbsp;+ Outbound Endpoints.<br>&nbsp;&nbsp;&nbsp;+ Resolver Rules.<br>&nbsp;&nbsp;&nbsp;+ DNS Forwarding.<br>&nbsp;&nbsp;&nbsp;+ ... | 13/10/2026 | 13/10/2026 | [Amazon Route 53 Resolver Introduction](https://000010.awsfcaj.com/1-introduce/) |
+| 4 | - Thực hành cấu hình Hybrid DNS với Amazon Route 53 Resolver:<br>&nbsp;&nbsp;&nbsp;+ Environment Preparation.<br>&nbsp;&nbsp;&nbsp;+ Remote Desktop Gateway.<br>&nbsp;&nbsp;&nbsp;+ Microsoft Active Directory.<br>&nbsp;&nbsp;&nbsp;+ Inbound & Outbound Endpoints.<br>&nbsp;&nbsp;&nbsp;+ Resolver Rules.<br>&nbsp;&nbsp;&nbsp;+ DNS Resolution Testing.<br>&nbsp;&nbsp;&nbsp;+ Resource Cleanup.<br>&nbsp;&nbsp;&nbsp;+ ... | 14/10/2026 | 14/10/2026 | [Amazon Route 53 Resolver Workshop](https://000010.awsfcaj.com/) |
+| 5 | - Trao đổi và tìm hiểu các nội dung liên quan đến dự án Reloop:<br>&nbsp;&nbsp;&nbsp;+ Problem & Solution.<br>&nbsp;&nbsp;&nbsp;+ Business Workflow.<br>&nbsp;&nbsp;&nbsp;+ User Roles.<br>&nbsp;&nbsp;&nbsp;+ Core Features.<br>&nbsp;&nbsp;&nbsp;+ AWS Services.<br>&nbsp;&nbsp;&nbsp;+ Security Requirements.<br>&nbsp;&nbsp;&nbsp;+ ... | 15/10/2026 | 15/10/2026 | |
+| 6 | - Tham gia buổi họp trực tiếp với các thành viên trong nhóm:<br>&nbsp;&nbsp;&nbsp;+ Tiếp tục thảo luận về ý tưởng và mục tiêu dự án Reloop.<br>&nbsp;&nbsp;&nbsp;+ Trao đổi về các chức năng và quy trình hoạt động của hệ thống.<br>&nbsp;&nbsp;&nbsp;+ Thảo luận về hướng triển khai và công việc của nhóm.<br>&nbsp;&nbsp;&nbsp;+ Thống nhất phân chia vai trò và trách nhiệm cho từng thành viên. | 16/10/2026 | 16/10/2026 | |
+
+---
+
+### Kết quả đạt được tuần 5:
+
+- Tìm hiểu và thực hành giám sát tài nguyên với Amazon CloudWatch:
+  + CloudWatch Metrics.
+  + CloudWatch Logs.
+  + Metric Filters.
+  + Custom Metrics.
+  + CloudWatch Alarms.
+  + CloudWatch Dashboards.
+  + Resource Cleanup.
+  + ...
+
+- Nắm được các kiến thức cơ bản về Amazon Route 53 Resolver:
+  + Amazon Route 53.
+  + Hybrid DNS.
+  + Private Hosted Zones.
+  + Inbound Endpoints.
+  + Outbound Endpoints.
+  + Resolver Rules.
+  + DNS Forwarding.
+  + ...
+
+- Thực hành cấu hình Hybrid DNS:
+  + Environment Preparation.
+  + Remote Desktop Gateway.
+  + Microsoft Active Directory.
+  + Inbound & Outbound Endpoints.
+  + Resolver Rules.
+  + DNS Resolution Testing.
+  + Resource Cleanup.
+  + ...
+
+- Tìm hiểu và trao đổi về định hướng dự án Reloop:
+  + Xác định vấn đề và mục tiêu mà dự án hướng đến.
+  + Tìm hiểu quy trình hoạt động và các chức năng chính.
+  + Trao đổi về các dịch vụ AWS dự kiến sử dụng.
+  + Bước đầu xem xét các yêu cầu bảo mật của hệ thống.
+
+- Tham gia họp nhóm và phân chia công việc:
+  + Thảo luận và thống nhất định hướng phát triển dự án.
+  + Trao đổi về các chức năng và hướng triển khai.
+  + Phân chia vai trò và trách nhiệm cho các thành viên.
+  + Xác định công việc cần tìm hiểu và thực hiện trong giai đoạn tiếp theo.
