@@ -1,28 +1,60 @@
 ---
 title: "Week 5 Worklog"
-date: 2025-09-08
+date: 2026-10-12
 weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
 
-# Week 5: Relational & NoSQL Database Services (Amazon RDS & DynamoDB)
-
 ### Week 5 Objectives:
-* Understand managed database architectures with Amazon Relational Database Service (Amazon RDS).
-* Provision an RDS PostgreSQL instance with Multi-AZ failover and Read Replica scaling.
-* Master Amazon DynamoDB core concepts: Partition Keys, Sort Keys, Global Secondary Indexes (GSIs), and serverless NoSQL performance.
+- Learn and practice monitoring AWS resources with Amazon CloudWatch.
+- Learn and practice configuring Hybrid DNS with Amazon Route 53 Resolver.
+- Explore and discuss the development direction of the Reloop project.
+- Participate in team meetings and agree on role assignments for team members.
 
-### Tasks Carried Out This Week:
-| Day | Tasks | Start Date | Completion Date | Reference Materials |
-| :--- | :--- | :--- | :--- | :--- |
-| **Mon** | - Analyzed managed database benefits over self-hosted databases on EC2.<br>- Created a DB Subnet Group spanning two private subnets in `Lab-VPC`.<br>- Provisioned an Amazon RDS PostgreSQL db.t3.micro instance in Multi-AZ deployment. | 08/09/2025 | 08/09/2025 | [Amazon RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html) |
-| **Tue** | - Connected to the RDS instance securely from a bastion host / EC2 private app server.<br>- Configured automated backup retention and created manual DB snapshots.<br>- Tested simulated Multi-AZ failover to examine failover duration and DNS switch behavior. | 09/09/2025 | 09/09/2025 | [RDS Multi-AZ Deployments](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html) |
-| **Wed** | - Created a Read Replica in the same region to offload read-heavy query traffic from the primary instance.<br>- Practiced modifying DB parameter groups and enabling performance insights. | 10/09/2025 | 10/09/2025 | [RDS Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html) |
-| **Thu** | - Introduction to NoSQL principles and Amazon DynamoDB serverless architecture.<br>- Created a DynamoDB table with Partition Key (`userId`) and Sort Key (`timestamp`).<br>- Experimented with On-Demand vs. Provisioned capacity modes, WCU/RCU calculations. | 11/09/2025 | 11/09/2025 | [Amazon DynamoDB Guide](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/) |
-| **Fri** | - Created a Global Secondary Index (GSI) to query items by secondary attributes efficiently.<br>- Ran Python AWS SDK (boto3) scripts to perform `PutItem`, `GetItem`, and `Query` operations.<br>- Cleaned up RDS instances (taking final snapshots) and submitted weekly worklog. | 12/09/2025 | 12/09/2025 | [DynamoDB GSI Docs](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GSI.html) |
+---
 
-### Week 5 Achievements & Key Takeaways:
-* **High Availability for Data:** Saw RDS Multi-AZ synchronously replicate transactions to a standby instance and failover automatically without data loss.
-* **Read Scalability:** Learned how Read Replicas relieve pressure on primary relational databases for analytics and read-intensive applications.
-* **NoSQL Query Mindset:** Understood that DynamoDB requires designing schemas based on access patterns rather than relational table normalization.
+### Tasks to be Carried Out This Week:
+
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 2 | - Learn and practice Amazon CloudWatch:<br>&nbsp;&nbsp;&nbsp;+ CloudWatch Metrics.<br>&nbsp;&nbsp;&nbsp;+ CloudWatch Logs.<br>&nbsp;&nbsp;&nbsp;+ CloudWatch Alarms.<br>&nbsp;&nbsp;&nbsp;+ CloudWatch Dashboards.<br>&nbsp;&nbsp;&nbsp;+ Resource Cleanup. | 12/10/2026 | 12/10/2026 | [Amazon CloudWatch Workshop](https://000008.awsfcaj.com/) |
+| 3 | - Learn about Amazon Route 53 Resolver and Hybrid DNS:<br>&nbsp;&nbsp;&nbsp;+ Hybrid DNS.<br>&nbsp;&nbsp;&nbsp;+ Private Hosted Zones.<br>&nbsp;&nbsp;&nbsp;+ Inbound Endpoints.<br>&nbsp;&nbsp;&nbsp;+ Outbound Endpoints.<br>&nbsp;&nbsp;&nbsp;+ Resolver Rules. | 13/10/2026 | 13/10/2026 | [Amazon Route 53 Resolver Introduction](https://000010.awsfcaj.com/1-introduce/) |
+| 4 | - Learn about the Hybrid DNS configuration process with Amazon Route 53 Resolver:<br>&nbsp;&nbsp;&nbsp;+ Environment Preparation.<br>&nbsp;&nbsp;&nbsp;+ Remote Desktop Gateway.<br>&nbsp;&nbsp;&nbsp;+ Microsoft Active Directory.<br>&nbsp;&nbsp;&nbsp;+ DNS Configuration.<br>&nbsp;&nbsp;&nbsp;+ DNS Resolution Testing. | 14/10/2026 | 14/10/2026 | [Amazon Route 53 Resolver Workshop](https://000010.awsfcaj.com/) |
+| 5 | - Explore and have preliminary discussions about the Reloop project:<br>&nbsp;&nbsp;&nbsp;+ Problem & Solution.<br>&nbsp;&nbsp;&nbsp;+ Project Objectives.<br>&nbsp;&nbsp;&nbsp;+ Core Features. | 15/10/2026 | 15/10/2026 | |
+| 6 | - Participate in an in-person meeting with team members:<br>&nbsp;&nbsp;&nbsp;+ Discuss the objectives and development direction of the Reloop project.<br>&nbsp;&nbsp;&nbsp;+ Discuss the Business Workflow and core system features.<br>&nbsp;&nbsp;&nbsp;+ Explore AWS services planned for the project.<br>&nbsp;&nbsp;&nbsp;+ Discuss the implementation approach and development plan.<br>&nbsp;&nbsp;&nbsp;+ Agree on roles and responsibilities for each team member. | 16/10/2026 | 16/10/2026 | |
+
+---
+
+### Week 5 Achievements:
+
+- Learned and practiced Amazon CloudWatch:
+  + CloudWatch Metrics.
+  + CloudWatch Logs.
+  + CloudWatch Alarms.
+  + CloudWatch Dashboards.
+  + Resource Cleanup.
+
+- Gained fundamental knowledge of Amazon Route 53 Resolver:
+  + Hybrid DNS.
+  + Private Hosted Zones.
+  + Inbound Endpoints.
+  + Outbound Endpoints.
+  + Resolver Rules.
+
+- Learned about the Hybrid DNS configuration process:
+  + Environment Preparation.
+  + Remote Desktop Gateway.
+  + Microsoft Active Directory.
+  + DNS Configuration.
+  + DNS Resolution Testing.
+
+- Gained an initial understanding of the Reloop project:
+  + Identified the problem and objectives of the project.
+  + Explored the planned system features.
+
+- Participated in team meetings and agreed on the development direction:
+  + Discussed the Business Workflow and core features.
+  + Explored AWS services planned for the project.
+  + Discussed the project development plan.
+  + Agreed on roles and responsibilities for team members.
