@@ -60,7 +60,7 @@ ReLoop hoàn toàn serverless, nằm trong một region (ap-southeast-1):
 - Log và số liệu nghiệp vụ đổ về CloudWatch; khi có cảnh báo, SNS gửi email cho Admin.
 - Toàn bộ hạ tầng viết bằng Terraform, state lưu trong bucket S3 có versioning.
 
-![Kiến trúc ReLoop](/images/2-Proposal/reloop-architecture.png)
+![Kiến trúc ReLoop](static/images/2-Proposal/reloop-architecture.png)
 
 *File gốc sơ đồ: `static/images/2-Proposal/reloop-architecture.drawio` (sinh bằng `diagram/make_architecture.py`).*
 
