@@ -1,66 +1,75 @@
 ---
-title: "Week 8 Worklog"
+title: "Worklog Tuần 8"
 date: 2026-11-02
 weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
 
-### Week 8 Objectives:
+### Mục tiêu tuần 8:
 
-- Review previous notes and complete the Worklogs from earlier internship weeks.
-- Collect and organize information about attended AWS events for the EventParticipated section.
-- Research AWS cost management and control tools.
-- Prepare a blog post about AWS Budgets and share it on the AWS Facebook fanpage.
+- Tổng hợp ghi chú và hoàn thiện nội dung Worklog của các tuần thực tập trước.
+- Thu thập và hệ thống hóa thông tin các sự kiện AWS đã tham gia để xây dựng mục EventParticipated.
+- Nghiên cứu các công cụ quản lý và kiểm soát chi phí AWS, biên soạn bài Blog thứ hai.
+- Tìm hiểu các giải pháp bảo vệ API với AWS WAF và API Gateway Throttling để chuẩn bị nội dung Blog thứ ba.
 
 ---
 
-### Tasks to be Carried Out This Week:
+### Công việc thực hiện trong tuần:
 
-| Day | Task | Start Date | Completion Date | Reference Material |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| Monday | - Review notes and prepare Worklogs for Weeks 1–3:<br>&nbsp;&nbsp;&nbsp;+ Review AWS learning activities and technical topics.<br>&nbsp;&nbsp;&nbsp;+ Summarize completed AWS workshop materials.<br>&nbsp;&nbsp;&nbsp;+ Organize activities by day and week.<br>&nbsp;&nbsp;&nbsp;+ Draft and finalize Worklog content.<br>&nbsp;&nbsp;&nbsp;+ ... | 02/11/2026 | 02/11/2026 | |
-| Tuesday | - Review notes and prepare Worklogs for Weeks 4–6:<br>&nbsp;&nbsp;&nbsp;+ Summarize AWS knowledge and workshop materials.<br>&nbsp;&nbsp;&nbsp;+ Review discussions and development progress of the ReLoop project.<br>&nbsp;&nbsp;&nbsp;+ Compile team meetings and website testing activities.<br>&nbsp;&nbsp;&nbsp;+ Draft and finalize Worklog content.<br>&nbsp;&nbsp;&nbsp;+ ... | 03/11/2026 | 03/11/2026 | |
-| Wednesday | - Collect information about two attended events for the EventParticipated section:<br>&nbsp;&nbsp;&nbsp;+ Buildrathon Kickoff 2026 – Code the Future with CMC Global (26/09/2026).<br>&nbsp;&nbsp;&nbsp;+ AWS Cloud & AI Day 2026 – HCMC Watch Party (29/09/2026).<br>&nbsp;&nbsp;&nbsp;+ Gather event dates, locations, and program details.<br>&nbsp;&nbsp;&nbsp;+ Summarize key takeaways and personal experiences.<br>&nbsp;&nbsp;&nbsp;+ Prepare content for the EventParticipated section.<br>&nbsp;&nbsp;&nbsp;+ ... | 04/11/2026 | 04/11/2026 | |
-| Thursday | - Research and prepare a blog post about AWS cost management:<br>&nbsp;&nbsp;&nbsp;+ AWS Budgets & Budget Alerts.<br>&nbsp;&nbsp;&nbsp;+ Budget Thresholds.<br>&nbsp;&nbsp;&nbsp;+ AWS Budgets Actions.<br>&nbsp;&nbsp;&nbsp;+ AWS Cost Anomaly Detection.<br>&nbsp;&nbsp;&nbsp;+ AWS Cost Explorer.<br>&nbsp;&nbsp;&nbsp;+ Cost Monitoring & Control.<br>&nbsp;&nbsp;&nbsp;+ Summarize findings and write a post for the AWS Facebook fanpage. | 05/11/2026 | 05/11/2026 | [AWS Budgets](https://docs.aws.amazon.com/cost-management/latest/userguide/bcm-lite-use-budget.html)<br>[Budget Actions](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-controls.html)<br>[Cost Anomaly Detection](https://docs.aws.amazon.com/cost-management/latest/userguide/manage-ad.html)<br>[Facebook Post](https://www.facebook.com/share/p/1FEBCbpDM7/) |
-| Friday | - Continue collecting event information for the EventParticipated section:<br>&nbsp;&nbsp;&nbsp;+ Fireside Chat with Dr. Werner Vogels (02/10/2026).<br>&nbsp;&nbsp;&nbsp;+ AWS Meetup (24/10/2026).<br>&nbsp;&nbsp;&nbsp;+ Review event agendas and key activities.<br>&nbsp;&nbsp;&nbsp;+ Summarize important insights and takeaways.<br>&nbsp;&nbsp;&nbsp;+ Organize event information and supporting images.<br>&nbsp;&nbsp;&nbsp;+ Prepare content for the EventParticipated section.<br>&nbsp;&nbsp;&nbsp;+ ... | 06/11/2026 | 06/11/2026 | |
+| 2 | - Tổng hợp ghi chú và biên soạn Worklog tuần 1–3:<br>&nbsp;&nbsp;&nbsp;+ Rà soát các hoạt động học tập và tìm hiểu AWS.<br>&nbsp;&nbsp;&nbsp;+ Tổng hợp nội dung các workshop đã học.<br>&nbsp;&nbsp;&nbsp;+ Sắp xếp thông tin theo từng ngày và từng tuần.<br>&nbsp;&nbsp;&nbsp;+ Biên soạn và hoàn thiện nội dung Worklog.<br>&nbsp;&nbsp;&nbsp;+ ... | 02/11/2026 | 02/11/2026 | |
+| 3 | - Tổng hợp ghi chú và biên soạn Worklog tuần 4–6:<br>&nbsp;&nbsp;&nbsp;+ Tổng hợp kiến thức và các workshop AWS đã học.<br>&nbsp;&nbsp;&nbsp;+ Rà soát quá trình thảo luận và phát triển dự án ReLoop.<br>&nbsp;&nbsp;&nbsp;+ Tổng hợp các hoạt động họp nhóm và kiểm thử website.<br>&nbsp;&nbsp;&nbsp;+ Biên soạn và hoàn thiện nội dung Worklog.<br>&nbsp;&nbsp;&nbsp;+ ... | 03/11/2026 | 03/11/2026 | |
+| 4 | - Tổng hợp thông tin hai sự kiện đã tham gia để xây dựng mục EventParticipated:<br>&nbsp;&nbsp;&nbsp;+ Buildrathon Kickoff 2026 – Code the Future with CMC Global (26/09/2026).<br>&nbsp;&nbsp;&nbsp;+ AWS Cloud & AI Day 2026 – HCMC Watch Party (29/09/2026).<br>&nbsp;&nbsp;&nbsp;+ Thu thập thông tin về thời gian, địa điểm và nội dung chương trình.<br>&nbsp;&nbsp;&nbsp;+ Tổng hợp kiến thức và trải nghiệm từ các sự kiện.<br>&nbsp;&nbsp;&nbsp;+ Chuẩn bị nội dung cho mục EventParticipated.<br>&nbsp;&nbsp;&nbsp;+ ... | 04/11/2026 | 04/11/2026 | |
+| 5 | - Nghiên cứu và biên soạn bài Blog thứ hai về quản lý chi phí AWS:<br>&nbsp;&nbsp;&nbsp;+ AWS Budgets & Budget Alerts.<br>&nbsp;&nbsp;&nbsp;+ Budget Thresholds.<br>&nbsp;&nbsp;&nbsp;+ AWS Budgets Actions.<br>&nbsp;&nbsp;&nbsp;+ AWS Cost Anomaly Detection.<br>&nbsp;&nbsp;&nbsp;+ AWS Cost Explorer.<br>&nbsp;&nbsp;&nbsp;+ Cost Monitoring & Control.<br>&nbsp;&nbsp;&nbsp;+ Tổng hợp kiến thức và viết bài chia sẻ trên fanpage AWS. | 05/11/2026 | 05/11/2026 | [AWS Budgets](https://docs.aws.amazon.com/cost-management/latest/userguide/bcm-lite-use-budget.html)<br>[Budget Actions](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-controls.html)<br>[Cost Anomaly Detection](https://docs.aws.amazon.com/cost-management/latest/userguide/manage-ad.html)<br>[Facebook Post](https://www.facebook.com/share/p/1FEBCbpDM7/) |
+| 6 | - Tiếp tục nghiên cứu tài liệu AWS và chuẩn bị bài Blog thứ ba về bảo vệ API:<br>&nbsp;&nbsp;&nbsp;+ AWS WAF & Rate-based Rules.<br>&nbsp;&nbsp;&nbsp;+ Amazon CloudFront & Web ACL.<br>&nbsp;&nbsp;&nbsp;+ API Gateway Throttling.<br>&nbsp;&nbsp;&nbsp;+ Rate Limits & Burst Limits.<br>&nbsp;&nbsp;&nbsp;+ HTTP 403 & HTTP 429 Responses.<br>&nbsp;&nbsp;&nbsp;+ API Gateway Direct Access.<br>&nbsp;&nbsp;&nbsp;+ AWS WAF Logging & CloudWatch Metrics.<br>&nbsp;&nbsp;&nbsp;+ Tổng hợp kiến thức và biên soạn nội dung Blog thứ ba. | 06/11/2026 | 06/11/2026 | [AWS WAF Rate-based Rules](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-rate-based-high-level-settings.html)<br>[API Gateway Throttling](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) |
 
 ---
 
-### Week 8 Achievements:
+### Kết quả đạt được tuần 8:
 
-- Reviewed and completed Worklogs for Weeks 1–3:
-  + Reviewed AWS learning and hands-on activities.
-  + Organized knowledge gained from AWS workshops.
-  + Arranged activities by day and week.
-  + Prepared Worklog content based on collected notes.
+- Tổng hợp và hoàn thiện nội dung Worklog tuần 1–3:
+  + Rà soát các hoạt động học tập và thực hành AWS.
+  + Hệ thống hóa kiến thức từ các workshop đã học.
+  + Sắp xếp công việc theo từng ngày và từng tuần.
+  + Biên soạn nội dung Worklog dựa trên ghi chú đã tổng hợp.
 
-- Reviewed and completed Worklogs for Weeks 4–6:
-  + Summarized AWS-related knowledge and activities.
-  + Organized discussions and development progress of the ReLoop project.
-  + Compiled team meetings and website testing activities.
-  + Finalized reports for the corresponding weeks.
+- Tổng hợp và hoàn thiện nội dung Worklog tuần 4–6:
+  + Tổng hợp các kiến thức và hoạt động liên quan đến AWS.
+  + Hệ thống hóa quá trình thảo luận và phát triển dự án ReLoop.
+  + Tổng hợp các hoạt động họp nhóm và kiểm thử website.
+  + Hoàn thiện nội dung báo cáo cho các tuần tương ứng.
 
-- Collected and organized information about attended events:
+- Thu thập và hệ thống hóa thông tin hai sự kiện đã tham gia:
   + Buildrathon Kickoff 2026 – Code the Future with CMC Global.
   + AWS Cloud & AI Day 2026 – HCMC Watch Party.
-  + Fireside Chat with Dr. Werner Vogels.
-  + AWS Meetup.
-  + Summarized event details, program content, and key takeaways.
-  + Prepared documentation and images for the EventParticipated section.
+  + Tổng hợp thông tin, nội dung chương trình và kiến thức tiếp thu được.
+  + Chuẩn bị tài liệu cho mục EventParticipated.
 
-- Researched AWS cost management and control tools:
+- Nghiên cứu các công cụ quản lý và kiểm soát chi phí AWS:
   + AWS Budgets.
   + Budget Alerts & Thresholds.
   + AWS Budgets Actions.
   + AWS Cost Anomaly Detection.
   + AWS Cost Explorer.
   + Cost Monitoring & Control.
-  + Understood the difference between budget alerts and actual spending limits.
+  + Hiểu được sự khác biệt giữa cảnh báo ngân sách và giới hạn chi tiêu thực tế.
 
-- Completed the second blog post about AWS cost management:
-  + Explored why AWS charges can exceed a configured budget.
-  + Summarized methods for monitoring and controlling AWS costs.
-  + Referenced official AWS documentation.
-  + Wrote the blog post "Why Can Your AWS Bill Exceed $10 Even If You Set a $10 Budget?".
-  + Shared the article on the AWS Facebook fanpage.
+- Hoàn thành bài Blog thứ hai về quản lý chi phí AWS:
+  + Tìm hiểu nguyên nhân chi phí AWS có thể vượt ngân sách đã thiết lập.
+  + Tổng hợp các phương pháp theo dõi và kiểm soát chi phí.
+  + Tham khảo tài liệu chính thức của AWS.
+  + Biên soạn bài viết "Đặt AWS Budget 10 USD, vì sao hóa đơn vẫn có thể vượt 10 USD?".
+  + Chia sẻ bài viết trên fanpage AWS.
+
+- Nghiên cứu và chuẩn bị nội dung Blog thứ ba về bảo vệ API:
+  + AWS WAF & Rate-based Rules.
+  + Amazon CloudFront & Web ACL.
+  + API Gateway Throttling.
+  + Rate Limits & Burst Limits.
+  + HTTP 403 & HTTP 429 Responses.
+  + API Gateway Direct Access.
+  + AWS WAF Logging & CloudWatch Metrics.
+  + Tìm hiểu vai trò của từng lớp bảo vệ trong kiến trúc CloudFront, API Gateway và Lambda.
+  + Tổng hợp kiến thức và biên soạn bài viết "API đã có AWS WAF, vì sao vẫn cần Throttling?".
