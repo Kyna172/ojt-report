@@ -1,28 +1,66 @@
 ---
 title: "Worklog Tuần 8"
-date: 2025-09-29
+date: 2026-11-02
 weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
 
-# Tuần 8: Giám sát hệ thống, Cảnh báo và Nhật ký tập trung (Amazon CloudWatch)
-
 ### Mục tiêu tuần 8:
-* Làm chủ 3 trụ cột giám sát hệ thống (Metrics, Logs, Traces) với Amazon CloudWatch và AWS X-Ray.
-* Thiết lập các cảnh báo tự động (CloudWatch Alarms) tích hợp Amazon SNS để gửi thông báo tức thì khi có sự cố.
-* Khai thác sức mạnh của CloudWatch Logs Insights để phân tích và truy vết lỗi từ hàng triệu bản ghi nhật ký.
 
-### Các công việc triển khai trong tuần:
-| Thứ | Nội dung công việc | Bắt đầu | Hoàn thành | Tài liệu tham khảo |
-| :--- | :--- | :--- | :--- | :--- |
-| **Thứ 2** | - Phân biệt Metric tiêu chuẩn và Metric tùy biến (Custom Metrics).<br>- Cài đặt và cấu hình phần mềm giám sát CloudWatch Unified Agent lên máy chủ EC2 để thu thập các thông số nâng cao như tỷ lệ dùng RAM và dung lượng ổ đĩa trống. | 29/09/2025 | 29/09/2025 | [Hướng dẫn CloudWatch Agent](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Install-CloudWatch-Agent.html) |
-| **Thứ 3** | - Thiết kế bảng điều khiển CloudWatch Dashboard trực quan: Hiển thị tải CPU, RAM, tỷ lệ lỗi HTTP 5xx của Load Balancer và độ trễ phản hồi.<br>- Tùy chỉnh khoảng thời gian làm mới dữ liệu và sắp xếp biểu đồ khoa học. | 30/09/2025 | 30/09/2025 | [CloudWatch Dashboards](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html) |
-| **Thứ 4** | - Cài đặt CloudWatch Alarm kích hoạt khi CPU vượt quá ngưỡng 80% trong 2 chu kỳ đo liên tiếp (5 phút).<br>- Tích hợp cảnh báo với Amazon SNS để gửi email khẩn cấp đến hòm thư cá nhân và gửi tin nhắn cảnh báo vào kênh Slack của nhóm. | 01/10/2025 | 01/10/2025 | [Cảnh báo CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html) |
-| **Thứ 5** | - Cấu hình thời hạn lưu log (Retention Policy) cho các Log Group để tránh lãng phí tiền lưu trữ log cũ.<br>- Thực hành viết truy vấn trên CloudWatch Logs Insights: Lọc các bản ghi lỗi `ERROR`, đếm số lượng lỗi theo mã phản hồi và tính bách phân vị độ trễ (`p95`, `p99`). | 02/10/2025 | 02/10/2025 | [CloudWatch Logs Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html) |
-| **Thứ 6** | - Bật tính năng truy vết phân tán AWS X-Ray trên API Gateway và Lambda.<br>- Xem sơ đồ tương tác dịch vụ (Service Map) để phát hiện chính xác hàm nào hoặc câu truy vấn cơ sở dữ liệu nào đang gây nghẽn cổ chai.<br>- Viết báo cáo tuần 8. | 03/10/2025 | 03/10/2025 | [Tài liệu AWS X-Ray](https://docs.aws.amazon.com/xray/) |
+- Tổng hợp ghi chú và hoàn thiện nội dung Worklog của các tuần thực tập trước.
+- Thu thập và hệ thống hóa thông tin các sự kiện AWS đã tham gia để xây dựng mục EventParticipated.
+- Nghiên cứu các công cụ quản lý và kiểm soát chi phí AWS.
+- Biên soạn bài blog chia sẻ kiến thức về AWS Budgets và đăng lên fanpage AWS.
 
-### Kết quả đạt được & Bài học rút ra:
-* **Tư duy giám sát chủ động:** Chuyển từ việc bị động chờ khách hàng báo lỗi sang việc nhận cảnh báo tự động qua điện thoại ngay khi hệ thống có dấu hiệu bất thường.
-* **Tốc độ khoanh vùng sự cố:** Nhờ Logs Insights, việc tìm ra nguyên nhân gốc rễ và dòng code bị crash chỉ mất vài giây thay vì phải SSH vào từng server đọc từng file log thủ công.
-* **Nhìn rõ luồng đi của request:** AWS X-Ray giúp bóc tách từng mili-giây thời gian xử lý qua các microservice, là công cụ không thể thiếu khi tối ưu hiệu năng.
+---
+
+### Công việc thực hiện trong tuần:
+
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 2 | - Tổng hợp ghi chú và biên soạn Worklog tuần 1–3:<br>&nbsp;&nbsp;&nbsp;+ Rà soát các hoạt động học tập và tìm hiểu AWS.<br>&nbsp;&nbsp;&nbsp;+ Tổng hợp nội dung các workshop đã học.<br>&nbsp;&nbsp;&nbsp;+ Sắp xếp thông tin theo từng ngày và từng tuần.<br>&nbsp;&nbsp;&nbsp;+ Biên soạn và hoàn thiện nội dung Worklog.<br>&nbsp;&nbsp;&nbsp;+ ... | 02/11/2026 | 02/11/2026 | |
+| 3 | - Tổng hợp ghi chú và biên soạn Worklog tuần 4–6:<br>&nbsp;&nbsp;&nbsp;+ Tổng hợp kiến thức và các workshop AWS đã học.<br>&nbsp;&nbsp;&nbsp;+ Rà soát quá trình thảo luận và phát triển dự án ReLoop.<br>&nbsp;&nbsp;&nbsp;+ Tổng hợp các hoạt động họp nhóm và kiểm thử website.<br>&nbsp;&nbsp;&nbsp;+ Biên soạn và hoàn thiện nội dung Worklog.<br>&nbsp;&nbsp;&nbsp;+ ... | 03/11/2026 | 03/11/2026 | |
+| 4 | - Tổng hợp thông tin hai sự kiện đã tham gia để xây dựng mục EventParticipated:<br>&nbsp;&nbsp;&nbsp;+ Buildrathon Kickoff 2026 – Code the Future with CMC Global (26/09/2026).<br>&nbsp;&nbsp;&nbsp;+ AWS Cloud & AI Day 2026 – HCMC Watch Party (29/09/2026).<br>&nbsp;&nbsp;&nbsp;+ Thu thập thông tin về thời gian, địa điểm và nội dung chương trình.<br>&nbsp;&nbsp;&nbsp;+ Tổng hợp kiến thức và trải nghiệm từ các sự kiện.<br>&nbsp;&nbsp;&nbsp;+ Chuẩn bị nội dung cho mục EventParticipated.<br>&nbsp;&nbsp;&nbsp;+ ... | 04/11/2026 | 04/11/2026 | |
+| 5 | - Nghiên cứu và biên soạn bài blog về quản lý chi phí AWS:<br>&nbsp;&nbsp;&nbsp;+ AWS Budgets & Budget Alerts.<br>&nbsp;&nbsp;&nbsp;+ Budget Thresholds.<br>&nbsp;&nbsp;&nbsp;+ AWS Budgets Actions.<br>&nbsp;&nbsp;&nbsp;+ AWS Cost Anomaly Detection.<br>&nbsp;&nbsp;&nbsp;+ AWS Cost Explorer.<br>&nbsp;&nbsp;&nbsp;+ Cost Monitoring & Control.<br>&nbsp;&nbsp;&nbsp;+ Tổng hợp kiến thức và viết bài blog chia sẻ trên fanpage AWS. | 05/11/2026 | 05/11/2026 | [AWS Budgets](https://docs.aws.amazon.com/cost-management/latest/userguide/bcm-lite-use-budget.html)<br>[Budget Actions](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-controls.html)<br>[Cost Anomaly Detection](https://docs.aws.amazon.com/cost-management/latest/userguide/manage-ad.html)<br>[Facebook Post](https://www.facebook.com/share/p/1FEBCbpDM7/) |
+| 6 | - Tiếp tục tổng hợp thông tin các sự kiện cho mục EventParticipated:<br>&nbsp;&nbsp;&nbsp;+ Fireside Chat with Dr. Werner Vogels (02/10/2026).<br>&nbsp;&nbsp;&nbsp;+ AWS Meetup (24/10/2026).<br>&nbsp;&nbsp;&nbsp;+ Rà soát nội dung và các hoạt động chính của sự kiện.<br>&nbsp;&nbsp;&nbsp;+ Tổng hợp kiến thức và những điểm đáng chú ý.<br>&nbsp;&nbsp;&nbsp;+ Sắp xếp thông tin và hình ảnh minh họa.<br>&nbsp;&nbsp;&nbsp;+ Chuẩn bị nội dung cho mục EventParticipated.<br>&nbsp;&nbsp;&nbsp;+ ... | 06/11/2026 | 06/11/2026 | |
+
+---
+
+### Kết quả đạt được tuần 8:
+
+- Tổng hợp và hoàn thiện nội dung Worklog tuần 1–3:
+  + Rà soát các hoạt động học tập và thực hành AWS.
+  + Hệ thống hóa kiến thức từ các workshop đã học.
+  + Sắp xếp công việc theo từng ngày và từng tuần.
+  + Biên soạn nội dung Worklog dựa trên ghi chú đã tổng hợp.
+
+- Tổng hợp và hoàn thiện nội dung Worklog tuần 4–6:
+  + Tổng hợp các kiến thức và hoạt động liên quan đến AWS.
+  + Hệ thống hóa quá trình thảo luận và phát triển dự án ReLoop.
+  + Tổng hợp các hoạt động họp nhóm và kiểm thử website.
+  + Hoàn thiện nội dung báo cáo cho các tuần tương ứng.
+
+- Thu thập và hệ thống hóa thông tin các sự kiện đã tham gia:
+  + Buildrathon Kickoff 2026 – Code the Future with CMC Global.
+  + AWS Cloud & AI Day 2026 – HCMC Watch Party.
+  + Fireside Chat with Dr. Werner Vogels.
+  + AWS Meetup.
+  + Tổng hợp thông tin, nội dung chương trình và kiến thức tiếp thu được.
+  + Chuẩn bị tài liệu và hình ảnh cho mục EventParticipated.
+
+- Nghiên cứu các công cụ quản lý và kiểm soát chi phí AWS:
+  + AWS Budgets.
+  + Budget Alerts & Thresholds.
+  + AWS Budgets Actions.
+  + AWS Cost Anomaly Detection.
+  + AWS Cost Explorer.
+  + Cost Monitoring & Control.
+  + Hiểu được sự khác biệt giữa cảnh báo ngân sách và giới hạn chi tiêu thực tế.
+
+- Hoàn thành bài blog thứ hai về quản lý chi phí AWS:
+  + Tìm hiểu nguyên nhân chi phí AWS có thể vượt ngân sách đã thiết lập.
+  + Tổng hợp các phương pháp theo dõi và kiểm soát chi phí.
+  + Tham khảo tài liệu chính thức của AWS.
+  + Biên soạn bài viết "Đặt AWS Budget 10 USD, vì sao hóa đơn vẫn có thể vượt 10 USD?".
+  + Chia sẻ bài viết trên fanpage AWS.
